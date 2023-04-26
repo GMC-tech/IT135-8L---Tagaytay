@@ -35,10 +35,10 @@
                 <li><a href="user-home.php">HOME</a></li>
                 <li><a href="aboutUs.php">ABOUT US</a></li>
                 <li><a href="#">PROGRAMS</a></li>
-                <li><a href="#">NEWS & EVENTS +</a>
+                <li><a href="news_events.php">NEWS & EVENTS +</a>
                     <ul>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="news_events.php">NEWS</a></li>
+                        <li><a href="news_events.php">EVENTS</a></li>
                     </ul>
                 </li>
                 <li><a href="contactUs.php">CONTACT US</a></li>
