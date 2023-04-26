@@ -67,7 +67,7 @@ include "contact-form-handler.php";
             <input type="text" id="subject" name="subject">
             <label for="message">Write a message</label>
             <textarea name="message" form="">Type in your message here</textarea>
-            <div class="col-md-12 my-2"><?php echo $alert; ?></div>
+            <?php echo $alert; ?>
             <button type="button" name="submit" value="Submit">Submit</button>
         </form>
 
