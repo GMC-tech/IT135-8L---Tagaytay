@@ -34,11 +34,11 @@
             <ul>
                 <li><a href="user-home.php">HOME</a></li>
                 <li><a href="aboutUs.php">ABOUT US</a></li>
-                <li><a href="#">PROGRAMS</a></li>
-                <li><a href="news_events.php">NEWS & EVENTS +</a>
+                <li><a href="programs.php">PROGRAMS</a></li>
+                <li><a href="NEWS-AND-EVENTS.php">NEWS & EVENTS +</a>
                     <ul>
-                        <li><a href="news_events.php">NEWS</a></li>
-                        <li><a href="news_events.php">EVENTS</a></li>
+                        <li><a href="news-headline.php">NEWS</a></li>
+                        <li><a href="event-headline.php">EVENTS</a></li>
                     </ul>
                 </li>
                 <li><a href="contactUs.php">CONTACT US</a></li>
