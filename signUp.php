@@ -28,6 +28,7 @@
     <title>Sign Up | Taytay Agriculture Office</title>
 </head>
 <body>    
+    <div class="start"></div>
     <!-- Sign Up Form -->
     <div class="container">
         <div class="content">
