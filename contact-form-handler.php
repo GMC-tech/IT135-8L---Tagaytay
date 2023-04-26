@@ -1,42 +1,54 @@
 <?php
+//Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
-require_once 'PHPMailer/src/Exception.php';
-require_once 'PHPMailer/src/PHPMailer.php';
-require_once 'PHPMailer/src/SMTP.php';
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+//Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
-
 $alert = '';
-
 if(isset($_POST["submit"])) {
-    //Retrieve form data
-    $first_name = $_POST['firstname'];
-    $last_name = $_POST['lastname'];
-    $email = $_POST['uemail'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+   //Retrieve form data
+   $first_name = $_POST['firstname'];
+   $last_name = $_POST['lastname'];
+   $email = $_POST['uemail'];
+   $subject = $_POST['subject'];
+   $message = $_POST['message'];
 
-    try{ 
-       $mail->isSMTP();
-       $mail->Host = 'smtp.gmail.com';
-       $mail->SMTPAuth = true;
-       $mail->Username = 'taytayagriculturetest@gmail.com';
-       $mail->Password = 'ygmrrndsakldskqh'; /*password in gmail: it135project */
-       $mail->SMTPSecure = "tls";
-       $mail->Port = '587';
+   try {
+      //Server settings
+     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+      $mail->isSMTP();                                            //Send using SMTP
+      $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+      $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+      $mail->Username   = 'acadstoragenc1@gmail.com';                     //SMTP username
+      $mail->Password   = 'yzypxdtqqkurpjqs';                               //SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+      $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+  
+      //Recipients
+      $mail->setFrom( $email, 'Taytay Agriculture Office | Contact Form');
+      $mail->addAddress('taytayagriculturetest@gmail.com', 'Receiver'); //can be changed to the actual e-mail of Taytay Agriculture (so they will receive the inquiries)
+      $mail->addReplyTo($email, $first_name . ' ' . $last_name);
+  
+      //Attachments
+     // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+  
+      //Content
+      $mail->isHTML(true);                                  //Set email format to HTML
+      $mail->Subject = $subject;
+      $mail->Body    = "<b>This Message is from:</b> $first_name $last_name <br> <b>Email:</b> $email <br> <b>Message:</b> <br>  $message " ;
+  
+      $mail->send();
+      echo 'Message has been sent';
+  } catch (Exception $e) {
+      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
 
-       $mail->setForm('taytayagriculturetest@gmail.com');
-       $mail->addAddress('annpatatas@gmail.com');
-
-       $mail->isHTML(true);
-       $mail->Subject = 'Message Received from Contact:' . $first_name . $last_name;
-       $mail->Body = "Name: $first_name $last_name <br> Email: $email <br> Subject: $subject <br> Message: $message";
-
-       $mail->send();
-       $alert= "<div class='alert-success'><span>Message Sent! Thank you for Contacting Us.</span></div>";
-    }catch(Exception $e){
-       $alert= "<div class='alert-error'><span>'.$e->getMessage().'</span></div>";
-    }
 
 }
-?>
+
