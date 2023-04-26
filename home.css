@@ -1,0 +1,384 @@
+
+@font-face {
+    font-family: 'General Sans';
+    src: url('fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('fonts/GeneralSans-Regular.woff') format('woff'),
+         url('fonts/GeneralSans-Regular.ttf') format('truetype');
+
+  }
+
+@font-face {
+  font-family: 'General Sans-Semibold';
+  src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
+       url('fonts/GeneralSans-Semibold.woff') format('woff'),
+       url('fonts/GeneralSans-Semibold.ttf') format('truetype');
+}
+
+
+.c-item {
+    height: 480px;
+  }
+  
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+  }
+  
+  .carousel-caption{
+    text-align: left;
+  }
+
+  .carousel-caption h1{
+    font-family: 'General Sans-Semibold';
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+
+  .carousel-caption h5{
+    font-family: 'General Sans';
+    color: #FFFFFF;
+    margin-bottom: 50px;
+  }
+
+     /*OUR PROGRAMS*/
+     .programs-text{
+      width: 100%;
+      text-align: center;
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
+    
+    .programs-text h1{
+      font-family: 'General Sans-Semibold';
+      color: #033296;
+    }
+    
+    
+    .programs-card{
+      border: none;
+    }
+
+    .programs-container{
+      max-width: 60%;
+      margin: auto;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+    .programs-body{
+      padding: 0px;
+      padding-top: 20px;
+    }
+    
+    .programs-container a{
+     text-decoration: none;
+    }
+    
+    .programs-card-title{
+      font-family: 'General Sans-Semibold';
+      color: #000;
+      padding-top: 10px;
+    }
+    
+    
+    .programs-container a{
+        text-decoration: none;
+        position: relative;
+        top: 0;
+        transition: top ease 0.5s;
+      }
+    
+    .programs-container a:hover{
+        top: -15px;
+      }
+
+      .programs-button{
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+      }
+    
+      .programs-button input{
+        font-family: 'General Sans';
+        font-size: 1vw;
+        background: #033296;
+        border: 1px solid #486284;
+        border-radius: 50px;
+        color: white;
+        width: 210px;
+        height: 48px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+      }
+    
+      .programs-button input:hover {
+        background-color: #0a22fc;
+      }
+
+  
+
+  /*ABOUT US*/
+
+  .about-text{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+
+  .about-text h1{
+    font-family: 'General Sans-Semibold';
+    color: #033296;
+  }
+
+  .about-section *{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+  .about-section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+}
+
+.about-container{
+    max-width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.content{
+    display: flex;
+    background-color: #fff;
+}
+
+.content-img{
+    flex: 1.5;
+}
+
+.content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-text{
+    flex: 1.5;
+    padding: 4rem;
+}
+
+.content-text .content-title{
+    font-family:'General Sans-Semibold' ;
+    color: #222;
+    font-size: 3vw;
+}
+
+.content-text .content-paragraph{
+  font-family:'General Sans' ;
+    font-size: 1.5vw;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.content-text .btn{
+  padding-top: 10px;
+  font-family: 'General Sans';
+  font-size: 1vw;
+  background: #033296;
+  border: 1px solid #486284;
+  border-radius: 50px;
+  color: white;
+  width: 210px;
+  height: 48px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+
+.content-text .btn:hover {
+  background-color: #0a22fc;
+  color: white;
+}
+
+
+ /*NEWS AND EVENTS*/
+
+.news-text{
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.news-text h1{
+  font-family: 'General Sans-Semibold';
+  color: #033296;
+}
+
+
+.card{
+  border: none;
+}
+.news-container{
+  max-width: 90%;
+  margin: auto;
+}
+.card-body{
+  padding: 0px;
+  padding-top: 20px;
+}
+
+.news-container a{
+ text-decoration: none;
+}
+
+.card-title{
+  font-family: 'General Sans-Semibold';
+  color: #000;
+}
+
+.card-text{
+  font-family: 'General Sans';
+  color: #000;
+}
+
+
+.news-container a{
+    text-decoration: none;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+
+.news-container a:hover{
+    top: -15px;
+  }
+
+.end{
+  margin-bottom: 4.5vw;
+}
+
+  @media(max-width: 570px){
+    .carousel-caption h5{
+        font-size: 15px;
+      }
+
+      .carousel-caption h1{
+        font-size: 30px;
+      }
+}
+
+  @media(max-width: 1270px){
+    .programs-container{
+      width: 80%;
+    }
+
+    .content-section a .programs-card h2{
+      font-size: 1.3vw;
+    }
+
+  }
+
+  @media(max-width: 900px){
+    .programs-container{
+      width: 100%;
+    }
+    .content-section a .programs-card h2{
+      font-size: 1.5vw;
+    }
+
+    .programs-button input{
+      width: 105px;
+      height: 24px;
+      font-size: 10px;
+    }
+
+    .content-text .btn{
+      width: 105px;
+      height: 24px;
+      font-size: 10px;
+      padding-top: 5px;
+    }
+    
+
+  }
+
+
+    @media(max-width: 645px){
+      .content-section{
+        flex-direction: column;
+      }
+
+      .programs-container{
+        width: 100%;
+      }
+      .content-section a .programs-card h2{
+        font-size: 2vw;
+      }
+    }
+
+
+    @media(max-width: 1081px){
+
+      .content-img{
+        flex: 2;
+    }
+    
+    .content-img img{
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .content-text{
+        flex: 2;
+        padding: 2rem;
+    }
+
+
+
+    }
+
+
+
+  @media screen and (max-width: 645px){
+      .content{
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .content-text .content-paragraph{
+          text-align: justify;
+      }
+  
+      .content-img{
+          width: 100%;
+      }
+
+
+
+  .content-text .content-title{
+    font-size: 4vw;
+}
+
+.content-text .content-paragraph{
+    font-size: 2vw;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+  }
+
+
+
+  @media only screen and (max-width: 1400px) {
+    #hero-carousel{
+        margin-top: 60px;
+    }
+  }
