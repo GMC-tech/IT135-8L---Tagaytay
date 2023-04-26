@@ -29,7 +29,9 @@
     padding: 0;
     margin: 0;
 }
-
+.start{
+  margin-top: 9.5vw;
+}
 .container{
     display: flex;
     max-width: 40%;

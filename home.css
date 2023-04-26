@@ -14,7 +14,9 @@
        url('fonts/GeneralSans-Semibold.ttf') format('truetype');
 }
 
-
+.start{
+  margin-top: 6.3vw;
+}
 .c-item {
     height: 480px;
   }
