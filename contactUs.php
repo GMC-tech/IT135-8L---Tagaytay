@@ -51,7 +51,7 @@ include "contact-form-handler.php";
         <div class="filler"></div>
         <h2>You may also contact us using this form</h2>
         <div class="filler"></div>
-        <form method="POST" action="contact-form-handler.php"> <!-----add php POST to submit attribute----->
+        <form action="contact-form-handler.php" name="contact" method="POST">
             <div class="half1">
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="firstname">
@@ -66,9 +66,9 @@ include "contact-form-handler.php";
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="subject">
             <label for="message">Write a message</label>
-            <textarea name="message" form="">Type in your message here</textarea>
+            <textarea name="message" placeholder="Type in your message here."></textarea>
             <?php echo $alert; ?>
-            <button type="button" name="submit" value="Submit">Submit</button>
+            <button type="submit" name="submit" value="Submit">Submit</button>
         </form>
 
         <div class="filler"></div>
