@@ -1,8 +1,5 @@
 <?php
     session_start();
-/*    if(isset($_SESSION["user_type"])){
-        $_SESSION["user_type"]==1 ? header("Location: admin") : header("Location: user");
-    } */
     include "config.php"; 
     include "navbar.php";
 ?>
