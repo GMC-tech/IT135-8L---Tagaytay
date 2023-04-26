@@ -4,7 +4,7 @@ src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
      url('fonts/GeneralSans-Semibold.woff') format('woff'),
      url('fonts/GeneralSans-Semibold.ttf') format('truetype');
 }
-
+/*nice*/
 @font-face {
 font-family: 'Roboto';
 src: url('fonts/Roboto-Regular.ttf') format('truetype');
