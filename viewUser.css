@@ -20,13 +20,30 @@
          url('fonts/GeneralSans-Semibold.ttf') format('truetype');
     }
 
-.admin-welcome{
+table {
+  width: 90%;
+  border: 0;
+  border-spacing: 30px;
+}
+
+.view-user-heading{
     width: 100%;
     text-align: center;
     margin-top: 10%;
     margin-bottom: 40px;
     color: #033296
   }
+
+
+.view-user-container{
+    text-align: left;
+  }  
+
+.view-user-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
 
 .admin-home-button{
     width: 100%;
