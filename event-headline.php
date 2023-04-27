@@ -12,7 +12,6 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  
 
     <!-- Nav Bar CSS link-->
     <link rel="stylesheet" type="text/css" href="navbar.css">
@@ -178,18 +177,62 @@
     <div class="ne-container">
         <div class="ne-content">
             <div class="ne-content-img">
-                <img src="img/1.png" >
+                <img src="img/events_1.jpg" >
             </div>
             <div class="ne-content-text">
-                <h2 class="ne-content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
-                <p class="ne-content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <h2 class="ne-content-title">TATAY FARMERS' FAIR</h2>
+                <p class="ne-content-paragraph">Abangan ngayong MAYO 2023!</p>
+                <a href="Events1.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/events_2.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">NOW HAPPENING: Earth Day 2023: Invest In Our Planet</h2>
+                <p class="ne-content-paragraph">Ang ating Tanggapan ay mamimigay ng libreng buto, punla, at fertilizers ngayong umaga, April 22, 2023 sa tapat ng Bagong Munisipyo.</p>
+                <a href="Events2.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/events_3.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">EARTH DAY 2023 READY!</h2>
+                <p class="ne-content-paragraph">Our Office will distribute free seeds of various vegetables, seedlings, liquid fertilizers, and IEC materials in solidarity with the celebration of Earth Day 2023 with the theme Invest In Our Planet this Saturday, April 22, in front of the New Municipal Hall. The program will start at 6:00 am and the above mentioned will be given at 9:00 am.</p>
+                <a href="Events3.php" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
   </section>
 
 
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/events_4.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">𝐁𝐎𝐎𝐓𝐇 | 𝐓𝐑𝐀𝐃𝐄 | 𝐄𝐗𝐇𝐈𝐁𝐈𝐓 | 𝐅𝐑𝐄𝐄𝐁𝐈𝐄𝐒</h2>
+                <p class="ne-content-paragraph">Abangan ngayong MAYO 2023!</p>
+                <a href="Events4.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
 
 <div class="end"></div>
 

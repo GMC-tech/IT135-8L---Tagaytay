@@ -177,18 +177,136 @@
     <div class="ne-container">
         <div class="ne-content">
             <div class="ne-content-img">
-                <img src="img/1.png" >
+                <img src="img/news_1.jpg" >
             </div>
             <div class="ne-content-text">
-                <h2 class="ne-content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
-                <p class="ne-content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
-                <a href="Office For Agricultural Services.php" class="btn">READ MORE</a>
+                <h2 class="ne-content-title">IDOF - Integrated Diversified Organic System</h2>
+                <p class="ne-content-paragraph">Ang Pamahalaang Bayan sa pamumuno ng ating Smile Taytay Mayor Allan De Leon na kinatawan ng ating Tanggapan sa pamumuno ni Doc Ram Andres, kasama ng team UGAT, ay dumalo sa launching at blessing ng Montevedere Royale Integrated Diversified Organic Farm (IDOF) sa loob ng kanilang subdivision.
+Ang nasabing programa ay dinaluhan ng Pamahalaang Panlalawigan ng Rizal sa pamumuno ng ating Gob. Nina Ynares na kinatawan ni Bokal Jun Cabitac at ng Provincial Agriculture Offfice sa pamumuno ni Doc Reynaldo Bonita.</p>
+                <a href="News1.php" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
   </section>
 
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_2.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">LOST DOG</h2>
+                <p class="ne-content-paragraph">Name: Monique
+			Name: Monique<br>
+			Breed: Mixed<br>
+			Color: Light Brown<br>
+			Sex: Female<br>
+			Other Description: White belly<br>
+			Last Seen: Sitio Burol, Barangay San Juan, Taytay, Rizal near Marina's Canteen, Apri 20, 2023. </p>
+                <a href="News2.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
 
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_3.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">SMILE KABATAAN AT AGRIKULTURA</h2>
+                <p class="ne-content-paragraph">Bilang bahagi ng selebrasyon ng Earth Day 2023, ang ating Tanggapan ay naimbitahan upang pangunahan ang pagtuturo sa ating mga kabataan ng Paglilipat Tanim ng Gulay. Ang kanilang mga nailipat tanim ay siya rin nilang iuuwi upang palakihin sa kanilang mga bahay o bakuran.</p>
+                <a href="News3.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_4.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">UGAT SIMONA NATIONAL HIGH SCHOOL</h2>
+                <p class="ne-content-paragraph">Patuloy ang pagbisita at aktibidad ng mga guro at team UGAT sa Gulayan sa Paaralan ng Simona National High School, Barangay San Isidro. Gumagamit sila ng mga recyclable material kagaya ng bote upang gawing taniman.</p>
+                <a href="News4.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_5.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">Team UGAT goes to CRESDAVILLE 1!</h2>
+                <p class="ne-content-paragraph">Bilang tugon sa pakikiisa ng Cresdaville 1 Subdivision sa ating programang Urban Augmentation Taytay Program, ang ating team UGAT ay pinangunahan ang land preparation, plastic mulching at transplanting sa nasabing lugar. Ang mga senior citizens at residente ang magmamaintain ng kanilang urban garden.</p>
+                <a href="News5.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_weather.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">WEEKLY WEATHER OUTLOOK</h2>
+                <p class="ne-content-paragraph">BY MONDAY UNTIL WEDNEDAY (16 - 19 APRIL), THE EASTERN SECTION OF LUZON WILL EXPERIENCE CLOUDY SKIES WITH SCATTERED RAINSHOWERS AND THUNDERSTORMS. THE REST OF THE COUNTRY WILL HAVE SUNNY TO PARTLY CLOUDY SKIES APART FROM ISOLATED AFTERNOON RAINSHOWERS AND THUNDERSTORMS.</p>
+                <a href="News6.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_7.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">LOST DOG</h2>
+                <p class="ne-content-paragraph">Name: Peachie<br>
+				Breed: Pomeranian<br>
+				Sex: Female<br>
+				Color: Black<br>
+				Last seen: Along E. Rodriguez Ave. brgy san isidro, Taytay rizal</p>
+                <a href="News7.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img">
+                <img src="img/news_8.jpg" >
+            </div>
+            <div class="ne-content-text">
+                <h2 class="ne-content-title">MISSING CAT</h2>
+                <p class="ne-content-paragraph">Name: Squid<br>
+				Sex: Male<br>
+				Color: Black<br>
+				Breed: Mixed<br>
+				Other Description: With blue checkered collar, thinning hair on the eyebrow.</p>
+                <a href="News8.php" class="btn">READ MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
 
 <div class="end"></div>
 
