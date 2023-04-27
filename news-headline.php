@@ -149,6 +149,13 @@
   background-color: #0a22fc;
   color: white;
 }
+
+.btn-container .btn:active {
+    background: white;
+    border: 1px solid #033296;
+    border-radius: 50px;
+    color: #033296
+}
 </style>
 </head>
 <body>
