@@ -9,16 +9,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" type="text/css" href="admin-home.css">
   
   <title>Admin Home | Taytay Agriculture Office</title>
 </head>
 <body>   
-    <div class="container">
-        <div class="content">
-            <h1> Welcome, admin! </h1>
-        </div>
+    <div class="admin-welcome">
+        <h1> ADMIN PANEL </h1>
     </div>
+
+    <div class="admin-home-button">
+      <a href="#">  
+        <input type="submit" value="MANAGE POSTS"/>  
+       </a>
+    </div>
+
+    <div class="admin-home-button">
+      <a href="viewUser.php">  
+        <input type="submit" value="MANAGE USERS"/>  
+       </a>
+    </div>
+    <br><br><br><br>
+
 </body>
 </html>
 <?php include "footer.html" ?>

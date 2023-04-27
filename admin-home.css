@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'General Sans';
+    src: url('fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('fonts/GeneralSans-Regular.woff') format('woff'),
+         url('fonts/GeneralSans-Regular.ttf') format('truetype');
+  
+  }
+  
+@font-face {
+    font-family: 'General Sans-Bold';
+    src: url('fonts/GeneralSans-Bold.woff2') format('woff2'),
+         url('fonts/GeneralSans-Bold.woff') format('woff'),
+         url('fonts/GeneralSans-Bold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'General Sans-Semibold';
+    src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
+         url('fonts/GeneralSans-Semibold.woff') format('woff'),
+         url('fonts/GeneralSans-Semibold.ttf') format('truetype');
+    }
+
+.admin-welcome{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #033296
+  }
+
+.admin-home-button{
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+.admin-home-button input{
+    font-family: 'General Sans';
+    font-size: 1vw;
+    background: #033296;
+    border: 1px solid #486284;
+    border-radius: 50px;
+    color: white;
+    width: 210px;
+    height: 48px;
+    font-family: 'General Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .admin-home-button input:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #033296;
+    cursor: pointer;
+  }
