@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="edit-post.css">
+    <link rel="stylesheet" type="text/css" href="addPost.css">
 
     <!-- Nav Bar CSS link-->
     <link rel="stylesheet" type="text/css" href="admin-navbar.css">
@@ -37,7 +37,7 @@
 	
         <div class="content">
 		
-            <h1><center>EDIT POST<center></h1>
+            <h1><center>ADD POST<center></h1>
             <div class="forms">
                 <form action="/add_user.php">
                     <label for="title">Title</label><br>
@@ -59,7 +59,7 @@
 					<input type="image" id="image-upload" name="image-upload" accept="image/*" style="display: none;"><br>
 					</div><br><br>
 					
-					<span class="edit-post">
+					<span class="add-post">
                     <button type="submit" id="submit-btn">ADD POST</button>
 					</span>
                 </form>
