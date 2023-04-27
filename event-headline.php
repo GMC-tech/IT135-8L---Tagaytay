@@ -150,6 +150,13 @@
   background-color: #0a22fc;
   color: white;
 }
+
+.btn-container .active {
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
+}
+
 </style>
 </head>
 <body>
@@ -158,7 +165,7 @@
 
 <div class="btn-container">
 <a href="news-headline.php" class="btn">NEWS</a>
-<a href="event-headline.php" class="btn">EVENTS</a>
+<a href="event-headline.php" class="btn active">EVENTS</a>
 </div>
 
 

@@ -150,12 +150,12 @@
   color: white;
 }
 
-.btn-container .btn:active {
-    background: white;
-    border: 1px solid #033296;
-    border-radius: 50px;
-    color: #033296
+.btn-container .active {
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
 }
+
 </style>
 </head>
 <body>
@@ -163,7 +163,7 @@
 <div class="start"></div>
 
 <div class="btn-container">
-<a href="news-headline.php" class="btn">NEWS</a>
+<a href="news-headline.php" class="btn active">NEWS</a>
 <a href="event-headline.php" class="btn">EVENTS</a>
 </div>
 
@@ -182,7 +182,7 @@
             <div class="ne-content-text">
                 <h2 class="ne-content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
                 <p class="ne-content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
-                <a href="#" class="btn">READ MORE</a>
+                <a href="Office For Agricultural Services.php" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
