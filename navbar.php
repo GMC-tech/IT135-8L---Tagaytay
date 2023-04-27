@@ -35,7 +35,7 @@
                 <li><a href="user-home.php">HOME</a></li>
                 <li><a href="aboutUs.php">ABOUT US</a></li>
                 <li><a href="programs.php">PROGRAMS</a></li>
-                <li><a href="NEWS-AND-EVENTS.php">NEWS & EVENTS +</a>
+                <li><a>NEWS & EVENTS +</a>
                     <ul>
                         <li><a href="news-headline.php">NEWS</a></li>
                         <li><a href="event-headline.php">EVENTS</a></li>
