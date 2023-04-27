@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'General Sans';
+    src: url('fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('fonts/GeneralSans-Regular.woff') format('woff'),
+         url('fonts/GeneralSans-Regular.ttf') format('truetype');
+
+  }
+
+@font-face {
+  font-family: 'General Sans-Semibold';
+  src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
+       url('fonts/GeneralSans-Semibold.woff') format('woff'),
+       url('fonts/GeneralSans-Semibold.ttf') format('truetype');
+}
+
+.btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+    
+  }
+  
+
+.btn-container .btn{
+    padding-top: 10px;
+    font-family: 'General Sans';
+    font-size: 1vw;
+    background: #033296;
+    border: 1px solid #486284;
+    border-radius: 50px;
+    color: white;
+    width: 210px;
+    height: 48px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+  }
+    
+  .btn-container .btn:hover {
+    background-color: #0a22fc;
+    color: white;
+  }
+  
+  .btn-container .active {
+    background-color: white;
+    border: 2px solid blue;
+    color: blue;
+  }
+
+  .ne-text{
+    width: 100%;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  .ne-text h1{
+    font-family: 'General Sans-Semibold';
+    color: #033296;
+  }
+
+.manage-content table{
+    width: 80%;
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    font-family: 'General Sans-Semibold';
+    margin: auto;
+}
+
+.manage-content table th{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+}
+
+.manage-content table td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+}
+
+.manage-content table td img{
+    width: 13vw;
+}
+
+.edit{
+    color: green;
+    text-decoration: none;
+}
+
+.delete{
+    color: red;
+    text-decoration: none;
+}
+
+.publish{
+    color: blue;
+    text-decoration: none;
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover{
+    text-decoration: underline;
+}
+
+.start{
+    margin-top: 9.5vw;
+}
+
+.end{
+    margin-bottom: 4.5vw;
+  }
+  
