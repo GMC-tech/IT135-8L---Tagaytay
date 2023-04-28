@@ -16,8 +16,12 @@ $result = mysqli_query($conn, "SELECT * FROM `users` ORDER BY `user_id` DESC");
 </head>
 
 <body>
+
+	<div class="start"></div>
+	
 	<div class="view-user-heading">
 		<h1>MANAGE USERS</h1>
+
     </div>
 	<div class="view-user-container">
 		<div class="view-user-table">
@@ -54,7 +58,9 @@ $result = mysqli_query($conn, "SELECT * FROM `users` ORDER BY `user_id` DESC");
 			</table>
 		</div>
 	</div>
-	<br><br><br><br>
+
+	<div class="end"></div>
+
 </body>
 </html>
-<?php include "footer.html"; ?>
+<?php include "admin-footer.html"; ?>

@@ -35,7 +35,7 @@ table {
     width: 100%;
     font-family: 'General Sans-Semibold';
     text-align: center;
-    margin-top: 10%;
+    margin-top: 11%;
     margin-bottom: 40px;
     color: #033296
   }
@@ -44,6 +44,7 @@ table {
 .view-user-container{
     font-family: 'Roboto';
     text-align: left;
+    
   }  
 
 .view-user-table{
@@ -51,3 +52,10 @@ table {
     justify-content: center;
     align-items: center;
   }  
+
+
+  
+  .end{
+    margin-bottom: 10.5vw;
+  }
+

@@ -30,14 +30,14 @@
     text-align: center;
     font-family: 'General Sans-Semibold';
     margin-top: 10%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     color: #033296
   }
 
 .admin-home-button{
     width: 100%;
     text-align: center;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
 .admin-home-button input{
@@ -60,4 +60,12 @@
     color: black;
     border: 1px solid #033296;
     cursor: pointer;
+  }
+
+  .start{
+    margin-top: 11.5vw;
+}
+
+.end{
+    margin-bottom: 10.5vw;
   }

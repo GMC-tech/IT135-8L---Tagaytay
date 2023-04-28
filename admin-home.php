@@ -14,6 +14,7 @@
   <title>Admin Home | Taytay Agriculture Office</title>
 </head>
 <body>   
+  <div class="start"></div>
     <div class="admin-welcome">
         <h1> ADMIN PANEL </h1>
     </div>
@@ -29,8 +30,8 @@
         <input type="submit" value="MANAGE USERS"/>  
        </a>
     </div>
-    <br><br><br><br>
+    <div class="end"></div>
 
 </body>
 </html>
-<?php include "footer.html" ?>
+<?php include "admin-footer.html" ?>
