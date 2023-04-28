@@ -17,11 +17,11 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#">MANAGE POSTS +</a>
+                <li><a href="admin-managePost.php">MANAGE POSTS +</a>
                     <ul>
-                        <li><a href="#">PROGRAMS</a></li>
-                        <li><a href="#">NEWS</a></li>
-                        <li><a href="#">EVENTS</a></li>
+                        <li><a href="admin-managePrograms.php">PROGRAMS</a></li>
+                        <li><a href="admin-manageNews.php">NEWS</a></li>
+                        <li><a href="admin-manageEvents.php">EVENTS</a></li>
                     </ul>
                 </li>
                 <li><a href="viewUser.php">MANAGE USERS</a></li>

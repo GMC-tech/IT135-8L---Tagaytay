@@ -19,7 +19,7 @@
     </div>
 
     <div class="admin-home-button">
-      <a href="#">  
+      <a href="admin-managePost.php">  
         <input type="submit" value="MANAGE POSTS"/>  
        </a>
     </div>

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include "config.php"; 
+    include "admin-navbar.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +15,17 @@
     
   
     <link rel="stylesheet" type="text/css" href="admin-managePost.css">
-    <title>Document</title>
+    <title>Manage News | Tatay Agriculture Office</title>
 </head>
 <body>
 
     <div class="start"></div>
 
     <div class="btn-container">
-        <a href="admin-managePost.html" class="btn">ALL POSTS</a>
-        <a href="admin-managePrograms.html" class="btn">PROGRAMS</a>
-        <a href="admin-manageNews.html" class="btn active">NEWS</a>
-        <a href="admin-manageEvents.html" class="btn">EVENTS</a>
+        <a href="admin-managePost.php" class="btn">ALL POSTS</a>
+        <a href="admin-managePrograms.php" class="btn">PROGRAMS</a>
+        <a href="admin-manageNews.php" class="btn active">NEWS</a>
+        <a href="admin-manageEvents.php" class="btn">EVENTS</a>
     </div>
 
 
@@ -74,3 +79,4 @@
     
 </body>
 </html>
+<?php include "footer.html"; ?>
