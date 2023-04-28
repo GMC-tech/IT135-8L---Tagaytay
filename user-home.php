@@ -179,7 +179,7 @@
   
   
     <div class="programs-button">
-      <a href="#">  
+      <a href="programs.php">  
         <input type="submit" value="LEARN MORE"/>  
        </a>
     </div>
@@ -202,7 +202,7 @@
             <div class="content-text">
                 <h2 class="content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
                 <p class="content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="aboutUs.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -268,7 +268,7 @@
 
 
   <div class="programs-button">
-    <a href="#">  
+    <a href="news-headline.php">  
       <input type="submit" value="LEARN MORE"/>  
      </a>
   </div>

@@ -23,24 +23,57 @@
   src: url('fonts/Roboto-Regular.ttf') format('truetype');
 }
 
-body {
-    font-family: 'open sans-light';
+@font-face {
+    font-family: 'General Sans';
+    src: url('fonts/GeneralSans-Regular.woff2') format('woff2'),
+         url('fonts/GeneralSans-Regular.woff') format('woff'),
+         url('fonts/GeneralSans-Regular.ttf') format('truetype');
+  
+  }
+  
+@font-face {
+    font-family: 'General Sans-Bold';
+    src: url('fonts/GeneralSans-Bold.woff2') format('woff2'),
+         url('fonts/GeneralSans-Bold.woff') format('woff'),
+         url('fonts/GeneralSans-Bold.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'General Sans-Semibold';
+    src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
+         url('fonts/GeneralSans-Semibold.woff') format('woff'),
+         url('fonts/GeneralSans-Semibold.ttf') format('truetype');
+    }
+
+.start{
+    margin-top: 9.5vw;
 }
+
+.ne-text{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .ne-text h1{
+    font-family: 'General Sans-Semibold';
+    color: #033296;
+  }
+
+  .ne-text h2{
+    font-family: 'General Sans-Semibold';
+    color: #033296;
+    text-align: left;
+  }
+
 
 .content {
     margin-left: 11.5%;
     margin-right: 11.5%;
 }
 
-.content h1 {
-    font-family: 'open sans-semibold';
-    font-style: normal;
-    padding-bottom: 0vw;
-    text-align: center;
-    font-size: 4vw;
-    color: #033296;
-    
-}
+
 
 .filler {
     height: 4vw;
@@ -58,6 +91,7 @@ body {
 
 .content .container1 h3 {
     font-size: 1vw;
+    font-family: 'General Sans-Semibold';
 }
 
 .content .container1 p {
@@ -98,7 +132,7 @@ body {
 }
 
 .content i {
-    margin-top: 1.7vw;
+    margin-top: 2vw;
     margin-bottom: 1vw;
 }
 .content iframe {
@@ -135,7 +169,7 @@ input {
 .content form {
     width: 60%;
     font-size: 1.2vw;
-    font-family: 'open sans-light';
+    font-family: 'General Sans';
     display: block;
     float: center;
     margin: 0 auto;
