@@ -44,9 +44,15 @@ if(isset($_POST["submit"])) {
       $mail->Body    = "<b>This Message is from:</b> $first_name $last_name <br> <b>Email:</b> $email <br> <b>Message:</b> <br>  $message " ;
   
       $mail->send();
-      echo 'Message has been sent';
+    // Redirect back to contact page with success message
+      header("Location: contactUs.php?success=Message%20successfully%20sent");
+      exit;
+    //echo 'Message has been sent';
   } catch (Exception $e) {
-      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    // Redirect back to contact page with error message
+      header("Location: contactUs.php?error=Message%20not%20sent");
+      exit;
+      //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
 
 

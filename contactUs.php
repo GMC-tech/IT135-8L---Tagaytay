@@ -73,7 +73,21 @@ include "contact-form-handler.php";
             <input type="text" id="subject" name="subject">
             <label for="message">Write a message</label>
             <textarea name="message" placeholder="Type in your message here."></textarea>
-            <?php echo $alert; ?>
+            <?php
+            // Check if a success or error message is set in the URL query string
+            if (isset($_GET['success'])) {
+                $message = $_GET['success'];
+                $alert_type = 'success';
+            } elseif (isset($_GET['error'])) {
+                $message = $_GET['error'];
+                $alert_type = 'error';
+            }
+
+            // Display the message to the user
+            if (isset($message)) {
+                echo '<div class="alert alert-'.$alert_type.'" role="alert">'.$message.'</div>';
+            }
+            ?>
             <button type="submit" name="submit" value="Submit">Submit</button>
         </form>
 
