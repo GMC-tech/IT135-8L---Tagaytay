@@ -50,33 +50,25 @@
 
                 <tr>
                     <td><img src="img/image-icon.png" alt=""></td>
-                    <td><a href="#" class="publish">+ ADD POST</a></td>
+                    <td><a href="addPost.php" class="publish">+ ADD POST</a></td>
                 </tr>
 
                 <!-- POSTED -->
-                <tr>
-                    <td><img src="img/1.png" alt=""></td>
-                    <td> This is the first post This is the first post This is the first post This is the first post</td>
-                    <td><a href="#" class="edit">EDIT</a></td>
-                    <td><a href="#" class="delete">DELETE</a></td>
-                    <td><a href="#" class="publish">PUBLISH</a></td>
-                </tr>
-
-                <tr>
-                    <td><img src="img/1.png" alt=""></td>
-                    <td> This is the first post This is the first post T post This is the first post T post This is the first post This is the first post This is the first post</td>
-                    <td><a href="#" class="edit">EDIT</a></td>
-                    <td><a href="#" class="delete">DELETE</a></td>
-                    <td><a href="#" class="publish">PUBLISH</a></td>
-                </tr>
-
-                <tr>
-                    <td><img src="img/1.png" alt=""></td>
-                    <td> This is the first post This is the first post This is the first post This is the first post</td>
-                    <td><a href="#" class="edit">EDIT</a></td>
-                    <td><a href="#" class="delete">DELETE</a></td>
-                    <td><a href="#" class="publish">PUBLISH</a></td>
-                </tr>
+                <?php
+                    $sql = "SELECT contents.content_id,contents.img,contents.title,category.category_name,contents.date_posted,contents.user_id,contents.category_id FROM contents LEFT JOIN category ON contents.category_id=category.category_id";
+                    $result = mysqli_query($conn, $sql) or die("Query failed");
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<tr>
+                                    <td> <img src='". $row["img"] ."'  alt=''></td>
+                                    <td>" . $row["title"] . "</td>
+                                    <td class='edit'><a href='editPost.php?id=" . $row["content_id"] . "' >EDIT</a></td>
+                                    <td class='delete'><a href='delete-Post.php?id=" . $row["content_id"] . "&catid=" . $row["category_id"] . "'>DELETE</a></td>
+                                    <td><a href='#' class='publish'>PUBLISH</a></td>
+                                </tr>";
+                        }
+                    }   
+                ?>
 
             </tbody>
         </table>

@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/174cd18bf7.js" crossorigin="anonymous"></script>    
 
         
-    <title>Document</title>
+    <title>Add Post | Taytay Agriculture Office</title>
 </head>
 <body>
 
@@ -39,24 +39,33 @@
 		
             <h1><center>ADD POST<center></h1>
             <div class="forms">
-                <form action="/add_user.php">
+                <form action="add-Post.php" method="POST" enctype="multipart/form-data">>
                     <label for="title">Title</label><br>
                     <input type="text" id="title" name="title" required><br>
  
-                    <label for="description">Description</label><br>
-                    <input type="text" id="description" name="description" required><br>
+					<label for="description">Write description</label><br>
+                    <textarea id="description" name="description" required></textarea><br><br>
 					
 					<label for="category">Category</label><br>
-                    <input type="text" id="category" name="category" required><br>
-					
-					<label for="message">Write Message</label><br>
-                    <textarea id="message" name="message" required></textarea><br><br>
+                    <select name="category" required>
+                            <option disabled selected value=""> Select Category</option>
+                            <?php
+                                $sql="SELECT * FROM category";
+                                $result=mysqli_query($conn,$sql) or die("Query Failed");
+                                if(mysqli_num_rows($result)> 0){
+                                    while($row=mysqli_fetch_assoc($result)){
+                                        echo "<option value='{$row['category_id']}' required>{$row['category_name']}</option>";
+                                    }
+                                }
+                            ?>
+                    </select>
+                    <br><br>
 					
 					<label for="image">Upload Image</label><br>
 					<div class="rectangle">
 					<label for="image-upload" class="custom-image-upload">
 					<img src="chooseImageIcon.png" alt="Upload Icon" class="upload-icon">Choose Image</label>
-					<input type="image" id="image-upload" name="image-upload" accept="image/*" style="display: none;"><br>
+					<input type="file" id="image-upload" name="image-upload" accept="img/*" style="display: none;"><br>
 					</div><br><br>
 					
 					<span class="add-post">
