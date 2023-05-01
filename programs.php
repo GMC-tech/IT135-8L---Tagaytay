@@ -164,6 +164,66 @@
     </div>
   </section>
 
+  <section class="programs-section">
+    <div class="programs-container">
+        <div class="programs-content">
+            <div class="programs-content-img">
+                <img src="home-headline-image/gabay.png" >
+            </div>
+            <div class="programs-content-text">
+                <h2 class="programs-content-title">Gabay Taytay Agri</h2>
+                <p class="programs-content-paragraph">An information drive program in the form of caravans, seminars, training, digital platform, exhibit, fair and dissemination of IEC materials.</p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="programs-section">
+    <div class="programs-container">
+        <div class="programs-content">
+            <div class="programs-content-img">
+                <img src="home-headline-image/farm-visit.png" >
+            </div>
+            <div class="programs-content-text">
+                <h2 class="programs-content-title">Farm Visitation</h2>
+                <p class="programs-content-paragraph"></p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="programs-section">
+    <div class="programs-container">
+        <div class="programs-content">
+            <div class="programs-content-img">
+                <img src="home-headline-image/tech-cons.png" >
+            </div>
+            <div class="programs-content-text">
+                <h2 class="programs-content-title">Technical Consultation</h2>
+                <p class="programs-content-paragraph"></p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="programs-section">
+    <div class="programs-container">
+        <div class="programs-content">
+            <div class="programs-content-img">
+                <img src="home-headline-image/seminar.png" >
+            </div>
+            <div class="programs-content-text">
+                <h2 class="programs-content-title">Seminar Series</h2>
+                <p class="programs-content-paragraph"></p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+  </section>
+
 
 
 <div class="end"></div>
