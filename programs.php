@@ -142,7 +142,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">Eskwelanihan</h2>
                 <p class="programs-content-paragraph">A school based gardening program that involves students and teachers in the practice of urban agriculture</p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs1.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -158,7 +158,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">UGAT</h2>
                 <p class="programs-content-paragraph">The Urban Gardening Augmentation Taytay Program (UGAT) focuses on the promotion of urban agriculture among the citizens of Taytay. This includes community gardening initiatives.</p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs2.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -173,7 +173,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">Gabay Taytay Agri</h2>
                 <p class="programs-content-paragraph">An information drive program in the form of caravans, seminars, training, digital platform, exhibit, fair and dissemination of IEC materials.</p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs3.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -188,7 +188,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">Farm Visitation</h2>
                 <p class="programs-content-paragraph"></p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs4.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -203,7 +203,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">Technical Consultation</h2>
                 <p class="programs-content-paragraph"></p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs5.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -218,7 +218,7 @@
             <div class="programs-content-text">
                 <h2 class="programs-content-title">Seminar Series</h2>
                 <p class="programs-content-paragraph"></p>
-                <a href="#" class="btn">LEARN MORE</a>
+                <a href="programs6.php" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
