@@ -27,7 +27,7 @@ include "contact-form-handler.php";
     <script src="https://kit.fontawesome.com/174cd18bf7.js" crossorigin="anonymous"></script>    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Taytay Agriculture | Contact Us</title>
+    <title>Contact Us | Taytay Agriculture Office</title>
 </head>
 <body>
     <div class="start"></div>
