@@ -244,7 +244,9 @@ button {
   
   .text-container {
     text-align: center;
-    margin-top: 50px;
+    width: 80%;
+    margin: auto;
+    padding-top:2em ;
   }
   
   .text-wrapper {
@@ -255,6 +257,7 @@ button {
   .text-wrapper p{
     text-indent: 2em;
     margin-bottom: 1em;
-    font-size: 24px;
+    font-size: 30px;
+    font-family: 'General Sans';
   }
   

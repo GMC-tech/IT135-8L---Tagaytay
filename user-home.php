@@ -95,7 +95,7 @@
     <div class="row gy-3">
       <div class="col-md-4 n-item">
   
-      <a href="#">
+      <a href="programs1.php">
         <div class="programs-card">
           <img src="home-headline-image/eskwelanihan.png" class="card-img-top" alt="...">
           <div class="programs-card-body">
@@ -108,7 +108,7 @@
   
       <div class="col-md-4 n-item">
   
-        <a href="#">
+        <a href="programs2.php">
           <div class="programs-card">
             <img src="home-headline-image/ugat.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -120,7 +120,7 @@
       </div>
   
       <div class="col-md-4 n-item">
-        <a href="#">
+        <a href="programs3.php">
           <div class="programs-card">
             <img src="home-headline-image/gabay.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -138,7 +138,7 @@
     <div class="row gy-3">
       <div class="col-md-4 n-item">
   
-      <a href="#">
+      <a href="programs4.php">
         <div class="programs-card">
           <img src="home-headline-image/farm-visit.png" class="card-img-top" alt="...">
           <div class="programs-card-body">
@@ -151,7 +151,7 @@
   
       <div class="col-md-4 n-item">
   
-        <a href="#">
+        <a href="programs5.php">
           <div class="programs-card">
             <img src="home-headline-image/tech-cons.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -163,7 +163,7 @@
       </div>
   
       <div class="col-md-4 n-item">
-        <a href="#">
+        <a href="programs6.php">
           <div class="programs-card">
             <img src="home-headline-image/seminar.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -222,7 +222,7 @@
 
     <a href="#">
       <div class="card">
-        <img src="home-headline-image/2.png" class="card-img-top" alt="...">
+        <img src="home-headline-image/1.png" class="card-img-top" alt="...">
         <div class="card-body">
           <h4 class="card-title">Fur Babies-Taytay is now powered by UNAHCO!</h4>
           <p class="card-text">As of 1:00 PM ubos na po ang freebies from our generous sponsor. Ang Doggissentials ay namamahagi ng free AppeBoost vitamins at Bubble Bath Grooming Shampoo.</p>
@@ -236,10 +236,10 @@
 
       <a href="#">
         <div class="card">
-          <img src="home-headline-image/1.png" class="card-img-top" alt="...">
+          <img src="home-headline-image/2.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h4 class="card-title">NOW HAPPENING: Fur Babies Day Out</h4>
-            <p class="card-text">NOW HAPPENING: Fur Babies Day Out at San Juan Gymnasium, Barangay Dolores until 5:00 PM today only.</p>
+            <h4 class="card-title">FREE FREE FREE</h4>
+            <p class="card-text">Ang ating Tanggapan ay namamahagi rin libreng buto, seedlings, fertilizers, at IEC materials dito sa ating Fur Babies Day Out until supplies last, located at San Juan Gym.</p>
           </div>
         </div>
       </a>
@@ -251,8 +251,8 @@
         <div class="card">
           <img src="home-headline-image/3.png" class="card-img-top" alt="...">
           <div class="card-body">
-            <h4 class="card-title">RABIES AWARENESS MONTH</h4>
-            <p class="card-text">Bilang bahagi ng paggunita ng Rabies Awareness Month may temang "Rabies-free na Pusa't Aso, Kaligtasan ng Pamayanan Pilipinong Pilipino" narito ang ilang paalala mula sa ating Pambayang Tanggapan at Pamahalaang Bayan ng Taytay.</p>
+            <h4 class="card-title">NOW HAPPENING: Fur Babies Day Out</h4>
+            <p class="card-text">Ang programang ito ay hatid sa atin ng Rizal Provincial Goverment sa pamumuno ng ating Gov. Nina Ynares sa pakikipagtulungan ng ating Pamahalaang Bayan sa pamumuno ng ating Mayor Allan De Leon  kasama ang UNAHCO.</p>
           </div>
         </div>
       </a>
