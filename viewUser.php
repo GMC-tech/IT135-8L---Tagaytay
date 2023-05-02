@@ -36,7 +36,8 @@ $result = mysqli_query($conn, "SELECT * FROM `users` ORDER BY `user_id` DESC");
 			echo "<td>".$query['last_name']."</td>";;	
             echo "<td>".$query['username']."</td>";
 			echo "<td>".$query['email']."</td>";;	
-            echo "<td>".$query['password']."</td>";
+
+			echo "<td> <span class='HiddenText'>".$query['password']."</span></td>";
 			echo "<td><a href=\"editUser.php?id=$query[user_id]\">Edit</a> | 
 			<a href=\"delete.php?id=$query[user_id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
 		}

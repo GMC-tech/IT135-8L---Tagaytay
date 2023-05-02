@@ -14,6 +14,15 @@
        url('fonts/GeneralSans-Semibold.ttf') format('truetype');
 }
 
+.line {
+    border-top: 10px solid #ccc;
+    margin: 10px 0;
+    margin-right: 5cm;
+    margin-left: 5cm;
+
+}
+
+
 .start{
   margin-top: 6.3vw;
 }
@@ -113,6 +122,7 @@
         font-style: normal;
         font-weight: 700;
         font-size: 15px;
+          margin-bottom:1cm;
       }
     
       .programs-button input:hover {
@@ -216,7 +226,7 @@
 .news-text{
   width: 100%;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 40px;
 }
 

@@ -3,7 +3,7 @@
 /*    if(isset($_SESSION["user_type"])){
         $_SESSION["user_type"]==1 ? header("Location: admin") : header("Location: user");
     } */
-    include "navbar.php";
+
     include "config.php"; 
 ?>
 
@@ -48,10 +48,10 @@
                     <input type="text" id="email" name="email" required><br>
 
                     <label for="password">Password</label><br>
-                    <input type="text" id="password" name="password" required><br>
+                    <input type="password" id="password" name="password" required><br>
 
                     <label for="confirm-password">Confirm Password</label><br>
-                    <input type="text" id="confirm-password" name="confirm-password" required>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
 
                     <button type="submit" name="signup" id="submit-btn">Sign Up</button>
                 </form>

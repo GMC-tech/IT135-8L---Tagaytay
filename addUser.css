@@ -76,7 +76,7 @@ src: url('fonts/Roboto-Regular.ttf') format('truetype');
     max-width: 63%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3.5vw;
+    margin-top: 5cm;
   }
 #return-btn {
     height: 50px;
@@ -100,6 +100,18 @@ src: url('fonts/Roboto-Regular.ttf') format('truetype');
   font-family: 'General Sans';
   font-style: normal;
   font-size: 1.5vw;
+}
+
+.forms input[type="password"]{
+    width: 97%;
+    height: 2.5vw;
+    margin-bottom: 1.7vw;
+
+    padding-left: 0.5vw;
+    border: 0.1vw solid black;
+    font-family: 'General Sans';
+    font-style: normal;
+    font-size: 1.5vw;
 }
 
 #submit-btn {

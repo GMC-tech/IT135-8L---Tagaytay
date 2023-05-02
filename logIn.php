@@ -1,5 +1,5 @@
 <!-- Nav Bar -->
-<?php include "navbar.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +35,7 @@
                     <input type="text" id="username" name="username" required><br>
 
                     <label for="password">Password</label><br>
-                    <input type="text" id="password" name="password" required><br>
+                    <input type="password" id="password" name="password" required><br>
 
                     <button type="submit" name="login" id="submit-btn">Log In</button>
                 </form>

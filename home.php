@@ -85,6 +85,7 @@
 
   <!--END OF  headline -->
 
+
   <!-- ABOUT US-->
 
   <div class="about-text">
@@ -108,8 +109,11 @@
 
   <!-- END OF ABOUT US-->
 
+  <div class="line"></div>
 
-<!--OUR PROGRAMS -->
+
+
+  <!--OUR PROGRAMS -->
   <div class="programs-text">
     <h1>OUR PROGRAMS</h1>
   </div>
@@ -209,9 +213,11 @@
 
   <!-- END OF Our Programs -->
 
+  <div class="line"></div>
 
 
-<!-- NEWS AND EVENTS-->
+
+  <!-- NEWS AND EVENTS-->
 <div class="news-text">
   <h1>NEWS AND EVENTS</h1>
 </div>

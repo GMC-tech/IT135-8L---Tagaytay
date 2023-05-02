@@ -90,10 +90,10 @@ mysqli_close($conn);
                     <input type="text" id="email" name="email" required><br>
 					
 					<label for="password">Password</label><br>
-                    <input type="text" id="password" name="password" required><br>
+                    <input type="password" id="password" name="password" required><br>
 					
 					<label for="confirmpassword">Confirm Password</label><br>
-                    <input type="text" id="confirmpassword" name="confirmpassword" required><br>
+                    <input type="password" id="confirmpassword" name="confirmpassword" required><br>
 					<span class="adduserbutton">
                     <button type="submit" id="submit-btn">ADD USER</button>
 					</span>

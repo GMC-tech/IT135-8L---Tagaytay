@@ -25,16 +25,35 @@
       src: url('fonts/Roboto-Regular.ttf') format('truetype');
       }
 
+@font-face {
+    font-family: 'General Sans';
+    src: url('fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('fonts/GeneralSans-Regular.woff') format('woff'),
+    url('fonts/GeneralSans-Regular.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'General Sans-Semibold';
+    src: url('fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('fonts/GeneralSans-Semibold.woff') format('woff'),
+    url('fonts/GeneralSans-Semibold.ttf') format('truetype');
+}
+
 /* Define table styles */
 table {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
 }
 
 table th, table td {
+    border-radius: 5px;
     border: none;
-    padding: 8px;
+    padding: 20px;
     text-align: left;
 }
 
@@ -89,11 +108,20 @@ table tr:hover {
 
 /* Define table container styles */
 .table-container {
-    max-width: 800px;
-    margin: 0 auto;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin: auto auto;
 }
 
+.hiddenText{ font-size: 0}             /* this makes span real content zero size width & height */
+.hiddenText::before{ content: '∗∗∗∗∗'; font-size: initial}
+
+.HiddenText{ color: transparent; }    /* span will be as long as real content + ::before */
+.HiddenText::before{ content: '∗∗∗∗∗'; color: initial}
+
 body {
+    border-radius: 5px;
+    font-family: 'General Sans';
     margin-top: 150px; /* Add margin for navigation bar */
 }
 
