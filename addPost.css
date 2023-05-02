@@ -24,7 +24,12 @@
   font-family: 'Roboto';
   src: url('fonts/Roboto-Regular.ttf') format('truetype');
   }
-  
+
+
+  body{
+    margin-top: 150px; /* Add margin for navigation bar */
+  }
+
   *{
     padding: 0;
     margin: 0;

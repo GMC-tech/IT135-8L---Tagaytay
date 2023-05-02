@@ -27,6 +27,7 @@ header{
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  margin-bottom: 150px; /* Add margin for navigation bar */
 }
 
 header .logo img{

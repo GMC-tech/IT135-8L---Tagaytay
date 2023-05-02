@@ -25,33 +25,77 @@
       src: url('fonts/Roboto-Regular.ttf') format('truetype');
       }
 
+/* Define table styles */
 table {
-  width: 90%;
-  border: 0;
-  border-spacing: 30px;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.view-user-heading{
-    width: 100%;
-    font-family: 'General Sans-Semibold';
-    text-align: center;
-    margin-top: 11%;
-    margin-bottom: 40px;
-    color: #033296
-  }
-
-
-.view-user-container{
-    font-family: 'Roboto';
+table th, table td {
+    border: none;
+    padding: 8px;
     text-align: left;
-    
-  }  
+}
 
-.view-user-table{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Define link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Define heading styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Define "Add New Data" link styles */
+.add-link {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+.add-link:hover {
+    background-color: #0062cc;
+}
+
+/* Set background color for odd rows */
+table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Define table row hover effect */
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Define table container styles */
+.table-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    margin-top: 150px; /* Add margin for navigation bar */
+}
 
 
   
