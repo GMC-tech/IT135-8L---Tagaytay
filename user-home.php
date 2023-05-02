@@ -275,16 +275,8 @@
 
   <div class="end"></div>
 
-
-</body>
-</html>
-
-    <!-- Redirect to Log In page -->
-   
-<?php include "footer.html" ?>
-
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
+  <!-- Messenger Chat Plugin Code -->
+  <div id="fb-root"></div>
 
 <!-- Your Chat Plugin code -->
 <div id="fb-customer-chat" class="fb-customerchat">
@@ -313,3 +305,11 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 </script>
+
+
+</body>
+</html>
+
+    <!-- Redirect to Log In page -->
+   
+<?php include "footer.html" ?>
