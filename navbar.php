@@ -12,12 +12,12 @@
     <header>
     <?php if(empty($_SESSION['username']))
             {
-                echo '<a href="user-home.php" class="logo"><img src="navbar-image/logo.png"></a>';
+                echo '<a href="home.php" class="logo"><img src="navbar-image/logo.png"></a>';
             }else
             {
                 if($_SESSION['user_type']==0)
                 {
-                    echo '<a href="user-home.php" class="logo"><img src="navbar-image/logo.png"></a>';
+                    echo '<a href="home.php" class="logo"><img src="navbar-image/logo.png"></a>';
                 }
                 else
                 {
@@ -32,7 +32,7 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="user-home.php">HOME</a></li>
+                <li><a href="home.php">HOME</a></li>
                 <li><a href="aboutUs.php">ABOUT US</a></li>
                 <li><a href="programs.php">PROGRAMS</a></li>
                 <li><a>NEWS & EVENTS +</a>

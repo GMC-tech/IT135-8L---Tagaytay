@@ -1,7 +1,9 @@
 <?php
+
+global $conn;
     session_start();
-    include "config.php"; 
-    /* Navbar */
+
+    include "config.php";
     include "admin-navbar.php";
 ?>
 <!DOCTYPE html>

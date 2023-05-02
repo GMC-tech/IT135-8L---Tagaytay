@@ -1,9 +1,10 @@
 <?php
 // Start session
+global $conn;
 session_start();
 
 // Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_type'])) {
     header("Location: logIn.php");
     exit;
 }
@@ -17,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $categoryid = mysqli_real_escape_string($conn, $_POST['category']);
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $date_posted = date("Y-m-d H:i:s");
-    $user_id = $_SESSION['user_id'];
+    $user_type = $_SESSION['user_type'];
     
 
     // Check if an image is uploaded
@@ -32,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert the post into the database
     $sql = "INSERT INTO contents (title, user_id, description, category_id, img, date_posted)
-            VALUES ('{$title}', '{$user_id}', '{$description}', '{$categoryid}', '{$targetFile}', '{$date_posted}');";
+            VALUES ('{$title}', '{$user_type}', '{$description}', '{$categoryid}', '{$targetFile}', '{$date_posted}');";
 
     if (mysqli_query($conn, $sql)) {
         // Redirect to the manage posts page

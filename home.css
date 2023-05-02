@@ -47,7 +47,7 @@
      .programs-text{
       width: 100%;
       text-align: center;
-      margin-top: 100px;
+      margin-top: 50px;
       margin-bottom: 40px;
     }
     
@@ -64,7 +64,7 @@
     .programs-container{
       max-width: 60%;
       margin: auto;
-      padding-bottom: 30px;
+      padding-bottom: 15px;
       text-align: center;
     }
     .programs-body{
@@ -97,7 +97,7 @@
       .programs-button{
         width: 100%;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 5px;
       }
     
       .programs-button input{
@@ -126,7 +126,7 @@
   .about-text{
     width: 100%;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 20px;
   }
 
@@ -230,7 +230,7 @@
   border: none;
 }
 .news-container{
-  max-width: 90%;
+  max-width: 60%;
   margin: auto;
 }
 .card-body{

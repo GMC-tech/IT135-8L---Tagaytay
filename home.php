@@ -41,7 +41,7 @@
     <div class="carousel-inner">
 
     <!-- headline contents -->
-    <a href="https://www.facebook.com/TaytayAgriculture">    
+    <a href="news-headline.php">
         <div class="carousel-item active c-item">
             <img src="home-headline-image/1.png" class="d-block w-100 c-img" alt="Slide 1">
             <div class="carousel-caption">
@@ -51,7 +51,7 @@
         </div>
     </a>
 
-    <a href="https://www.facebook.com/TaytayAgriculture">
+      <a href="news-headline.php">
         <div class="carousel-item c-item">
             <img src="home-headline-image/2.png" class="d-block w-100 c-img" alt="Slide 2">
             <div class="carousel-caption">
@@ -61,7 +61,7 @@
         </div>
     </a>
 
-    <a href="https://www.facebook.com/TaytayAgriculture">
+      <a href="news-headline.php">
         <div class="carousel-item c-item">
             <img src="home-headline-image/3.png" class="d-block w-100 c-img" alt="Slide 3">
             <div class="carousel-caption">
@@ -84,6 +84,29 @@
   </div>
 
   <!--END OF  headline -->
+
+  <!-- ABOUT US-->
+
+  <div class="about-text">
+    <h1>ABOUT US</h1>
+  </div>
+
+  <section class="about-section">
+    <div class="about-container">
+      <div class="content">
+        <div class="content-img">
+          <img src="home-headline-image/about.jpg" >
+        </div>
+        <div class="content-text">
+          <h2 class="content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
+          <p class="content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
+          <a href="aboutUs.php" class="btn">LEARN MORE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END OF ABOUT US-->
 
 
 <!--OUR PROGRAMS -->
@@ -186,29 +209,6 @@
 
   <!-- END OF Our Programs -->
 
-
-   <!-- ABOUT US-->
-
-  <div class="about-text">
-    <h1>ABOUT US</h1>
-  </div>
-
-  <section class="about-section">
-    <div class="about-container">
-        <div class="content">
-            <div class="content-img">
-                <img src="home-headline-image/about.jpg" >
-            </div>
-            <div class="content-text">
-                <h2 class="content-title">The Office For Agricultural Services - Taytay, Rizal.</h2>
-                <p class="content-paragraph">The Office for Agricultural Services Taytay is the primary department responsible for the promotion of agricultural development by providing the extension works, transfer of technology, provision of inputs, technical assistance and support services needed for domestic production.</p>
-                <a href="aboutUs.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- END OF ABOUT US-->
 
 
 <!-- NEWS AND EVENTS-->

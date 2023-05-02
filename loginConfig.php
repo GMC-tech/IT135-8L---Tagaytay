@@ -22,7 +22,7 @@
             }
             else if($query['user_type']=="0")
             {
-                header("location:user-home.php");
+                header("location:home.php");
             }
         }
         else
