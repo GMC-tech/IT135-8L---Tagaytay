@@ -79,6 +79,6 @@
 
 
     <!-- Footer -->
-<?php include "footer.html"; ?>
+<?php include "admin-footer.html"; ?>
 </body>
 </html>

@@ -43,6 +43,9 @@ $result = mysqli_query($conn, "SELECT * FROM `users` ORDER BY `user_id` DESC");
 		?>
 		</tbody>
 	</table>
+
+	    <!-- Footer -->
+<?php include "admin-footer.html"; ?>
 </body>
 </html>
 
