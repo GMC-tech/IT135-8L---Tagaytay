@@ -61,7 +61,7 @@ $username = $resultData['username'];
                     <input type="text" name="email" value="<?php echo $email; ?>" required><br>
 					
 					<label for="password">Password</label><br>
-                    <input type="text" name="password" value="<?php echo $password; ?>" required><br>
+                    <input type="password" name="password" value="<?php echo $password; ?>" required><br>
                     <input type="hidden" name="id" value="<?php echo $id; ?>" />
 					
 					<span class="edit-user-button">
