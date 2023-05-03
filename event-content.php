@@ -12,7 +12,8 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-  <title>Events | Taytay Agriculture Office</title>
+  
+
     <!-- Nav Bar CSS link-->
     <link rel="stylesheet" type="text/css" href="navbar.css">
 
@@ -40,7 +41,7 @@
   .ne-section *{
     padding:0;
     margin: 0;
-    box-sizing: border-box;
+    margin-top: 10px;
 }
 
   .ne-section{
@@ -59,9 +60,7 @@
 
 .ne-content{
     display: flex;
-    background-color: #fff;
-    box-shadow: 2px 2px 5px #9E9E9E, -1px -1px 5px #9E9E9E;
-    border-radius: 3px;
+
 }
 
 .ne-content-img{
@@ -77,6 +76,7 @@
 .ne-content-text{
     flex: 1.5;
     padding: 4rem;
+ text-align: justify;
 }
 
 .ne-content-text .ne-content-title{
@@ -124,7 +124,8 @@
 .btn-container{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  padding-left: 50px;
   gap: 1%;
   
 }
@@ -150,55 +151,84 @@
   color: white;
 }
 
-.btn-container .active {
-  background-color: white;
-  border: 2px solid blue;
-  color: blue;
+
+
+
+.ne-content-img2 img{
+  float: left;
+  width: 400px;
+  height: 320px;
+  padding: 0 30px 0 0
+}
+
+.text {
+  text-align: justify;
+  padding-left: 10px;
+}
+
+.text h2{
+    font-family:'General Sans-Semibold' ;
+    color: #222;
+    font-size: 1.7vw;
+    margin-bottom: 10px;
+}
+
+
+.text p{
+  text-align: justify;
+    font-family:'General Sans' ;
+    font-size: 1.2vw;
+    margin-top: 2rem;
+}
+
+.text p1 {
+    font-family:'General Sans' ;
+    font-size: 1.2vw;
+    color: gray;
 }
 
 </style>
 </head>
+<?php 
+
+
+$content_id=$_GET['eventid']; //get id which we want to update
+        $sql="SELECT *from contents where content_id={$content_id}";
+
+        $result=mysqli_query($conn,$sql) or die("Query failed ");
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+?>
 <body>
 
 <div class="start"></div>
 
 <div class="btn-container">
-<a href="news-headline.php" class="btn">NEWS</a>
-<a href="event-headline.php" class="btn active">EVENTS</a>
+<a href="event-headline.php" class="btn">Return </a>
 </div>
 
 
-
-<div class="ne-text">
-    <h1>EVENTS</h1>
-  </div>
-  <?php
-$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 3 ORDER BY date_posted DESC, content_id DESC");
-if (!$ret) {
-    die("Error executing query: " . mysqli_error($conn));
-}
-while ($row=mysqli_fetch_array($ret)) {
-
-?>
   <section class="ne-section">
     <div class="ne-container">
         <div class="ne-content">
-            <div class="ne-content-img">
+            <div class="ne-content-img2">
             <img src="<?php echo $row['img'];?>" >
+            <div class="text">
+                <h2><?php  echo $row['title'];?></h2>
+		    <p1><?php echo date("F j, Y", strtotime($row['date_posted'])); ?></p1>
+                <p><?php  echo $row['description'];?></p>
             </div>
-            <div class="ne-content-text">
-                <h2 class="ne-content-title"><?php  echo $row['title'];?></h2>
-                <p class="ne-content-paragraph"><?php  echo nl2br($row['description']);?></p>
-                <a href="event-content.php?eventid=<?php echo $row['content_id'];?>" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
   </section>
-
+  <?php }
+}?>
 
 
 <div class="end"></div>
-<?php } ?>
+
 <?php include "footer.html"; ?>
 
 </body>
