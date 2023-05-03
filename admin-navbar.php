@@ -25,15 +25,18 @@
                     </ul>
                 </li>
                 <li><a href="viewUser.php">MANAGE USERS</a></li>
-                <li><a href="#">ACCOUNT</a>
-                    <?php if(empty($_SESSION['username']))
-                            {
-                                echo '<ul><li><a href="logIn.php">LOGIN</a></li></ul>';
-                            }else
-                            {
-                                echo '<ul><li><a href="logout.php">LOGOUT</a></li></ul>';
-                            }
-                    ?>
+                <li>
+                    <?php if(empty($_SESSION['username'])): ?>
+                        <a href="#">ACCOUNT</a>
+                        <ul>
+                            <li><a href="logIn.php">LOGIN</a></li>
+                        </ul>
+                    <?php else: ?>
+                        <a href="#"><?php echo $_SESSION['username']; ?></a>
+                        <ul>
+                            <li><a href="logout.php">LOGOUT</a></li>
+                        </ul>
+                    <?php endif; ?>
                 </li>
             </ul>
         </nav>

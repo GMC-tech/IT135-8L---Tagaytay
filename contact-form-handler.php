@@ -31,7 +31,7 @@ if(isset($_POST["submit"])) {
   
       //Recipients
       $mail->setFrom( $email, 'Taytay Agriculture Office | Contact Form');
-      $mail->addAddress('taytayagriculturetest@gmail.com', 'Receiver'); //can be changed to the actual e-mail of Taytay Agriculture (so they will receive the inquiries)
+      $mail->addAddress('test.taytayagri@gmail.com', 'Receiver'); //can be changed to the actual e-mail of Taytay Agriculture (so they will receive the inquiries)
       $mail->addReplyTo($email, $first_name . ' ' . $last_name);
   
       //Attachments
