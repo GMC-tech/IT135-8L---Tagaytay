@@ -70,7 +70,7 @@ $content_id=$_GET['progid']; //get id which we want to update
         <h2>Inquire</h2>
         </div>
         <div class="filler" style="height: 1vw;"></div>
-        <form action="contact-form-handler.php" name="contact" method="POST">
+        <form action="programs-form-handler.php?progid=<?php echo $_GET['progid'];?>" name="contact" method="POST">
             <div class="half1">
                 
                 <label for="fname">First Name</label>
