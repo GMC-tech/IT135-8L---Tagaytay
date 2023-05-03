@@ -44,6 +44,9 @@ global $conn;
                 <form action="add-Post.php" method="POST" enctype="multipart/form-data">>
                     <label for="title">Title</label><br>
                     <input type="text" id="title" name="title" required><br>
+
+                    <label for="headline">Headline</label><br>
+                    <input type="text" id="title" name="title" required><br>
  
 					<label for="description">Write description</label><br>
                     <textarea id="description" name="description" required></textarea><br><br>

@@ -65,7 +65,6 @@
                                     <td>" . $row["title"] . "</td>
                                     <td class='edit'><a href='editPost.php?id=" . $row["content_id"] . "' >EDIT</a></td>
                                     <td class='delete'><a href='delete-Post.php?id=" . $row["content_id"] . "&catid=" . $row["category_id"] . "'>DELETE</a></td>
-                                    <td><a href='#' class='publish'>PUBLISH</a></td>
                                 </tr>";
                         }
                     }   
