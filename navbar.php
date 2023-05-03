@@ -21,7 +21,7 @@
                 }
                 else
                 {
-                    echo '<a href="admin-home.php" class="logo"><img src="navbar-image/logo.png"></a>';
+                    echo '<a href="home.php" class="logo"><img src="navbar-image/logo.png"></a>';
                 }    
             }
     ?>
@@ -50,8 +50,13 @@
                             <li><a href="logIn.php">LOGIN</a></li>
                             <li><a href="signUp.php">SIGN UP</a></li>
                         </ul>
-                    <?php else: ?>
-                        <a href="#"><?php echo $_SESSION['username']; ?></a>
+                    <?php elseif($_SESSION['user_type']==0): ?>
+                        <a href="user_profile.php"><?php echo $_SESSION['username']; ?></a>
+                        <ul>
+                            <li><a href="logout.php">LOGOUT</a></li>
+                        </ul>
+                    <?php elseif($_SESSION['user_type']==1): ?>
+                        <a href="admin-home.php"><?php echo $_SESSION['username']; ?></a>
                         <ul>
                             <li><a href="logout.php">LOGOUT</a></li>
                         </ul>

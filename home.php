@@ -1,5 +1,6 @@
 <?php
-    session_start();
+global $conn;
+session_start();
     include "config.php"; 
     include "navbar.php";
 ?>
@@ -31,48 +32,53 @@
   <!-- headline -->
 
 
+  <?php
+  // Establish a MySQL database connection
+
+  // Fetch the three latest posts from the database
+  $query = "SELECT * FROM contents WHERE category_id = 2 ORDER BY date_posted DESC, content_ID DESC LIMIT 3";
+  $result = mysqli_query($conn, $query);
+
+  ?>
+
   <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <?php
+      // Generate carousel indicators dynamically
+      for ($i = 0; $i < mysqli_num_rows($result); $i++) {
+        if ($i == 0) {
+          echo '<button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="' . $i . '" class="active" aria-current="true" aria-label="Slide ' . ($i + 1) . '"></button>';
+        } else {
+          echo '<button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="' . $i . '" aria-label="Slide ' . ($i + 1) . '"></button>';
+        }
+      }
+      ?>
     </div>
 
     <div class="carousel-inner">
-
-    <!-- headline contents -->
-    <a href="news-headline.php">
-        <div class="carousel-item active c-item">
-            <img src="home-headline-image/1.png" class="d-block w-100 c-img" alt="Slide 1">
-            <div class="carousel-caption">
-            <h1>Fur Babies-Taytay is now powered by UNAHCO!</h1>
-            <h5>As of 1:00 PM ubos na po ang freebies from our generous sponsor. Ang Doggissentials ay namamahagi ng free AppeBoost vitamins at Bubble Bath Grooming Shampoo.</h5>
-            </div>
-        </div>
-    </a>
-
-      <a href="news-headline.php">
-        <div class="carousel-item c-item">
-            <img src="home-headline-image/2.png" class="d-block w-100 c-img" alt="Slide 2">
-            <div class="carousel-caption">
-                <h1>FREE FREE FREE</h1>
-                <h5>Ang ating Tanggapan ay namamahagi rin libreng buto, seedlings, fertilizers, at IEC materials dito sa ating Fur Babies Day Out until supplies last, located at San Juan Gym.</h5>
-            </div>
-        </div>
-    </a>
-
-      <a href="news-headline.php">
-        <div class="carousel-item c-item">
-            <img src="home-headline-image/3.png" class="d-block w-100 c-img" alt="Slide 3">
-            <div class="carousel-caption">
-                <h1>NOW HAPPENING: Fur Babies Day Out at San Juan Gymnasium, Barangay Dolores until 5:00 PM today only.</h1>
-                <h5>Ang programang ito ay hatid sa atin ng Rizal Provincial Goverment sa pamumuno ng ating Gov. Nina Ynares sa pakikipagtulungan ng ating Pamahalaang Bayan sa pamumuno ng ating Mayor Allan De Leon  kasama ang UNAHCO.</h5>
-            </div>
-        </div>
-    </a>
-    <!-- end of headline contents -->
-    
+      <?php
+      // Generate carousel items dynamically
+      $counter = 0;
+      while ($row = mysqli_fetch_assoc($result)) {
+        $counter++;
+        $active = ($counter == 1) ? "active" : "";
+        echo '<a>';
+        echo '<div class="carousel-item ' . $active . ' c-item">';
+        echo '<div class="c-item-overlay"></div>'; // Add overlay to blur background and hide text
+        echo '<img src="' . $row["img"] . '" class="d-block w-100 h-100 c-img" alt="Slide ' . $counter . '">';
+        echo '<div class="carousel-caption">';
+        echo '<h1>' . $row["title"] . '</h1>';
+        echo '<h5>' . $row["headline"] . '</h5>';
+        echo '</div>';
+        echo '<div class="c-item-overlay-text">'; // Add overlay to blur background and hide text
+        echo '<a href=programs-content.php?progid=' . $row['content_id'] . '><span class="read-more">Read More</span></a>'; // Add "Read More" button
+        echo '</div>';
+        echo '</div>';
+        echo '</a>';
+      }
+      ?>
     </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -83,7 +89,11 @@
     </button>
   </div>
 
-  <!--END OF  headline -->
+  <?php
+  // Close the MySQL database connection
+  mysqli_close($conn);
+  ?>
+
 
 
   <!-- ABOUT US-->
@@ -117,11 +127,11 @@
   <div class="programs-text">
     <h1>OUR PROGRAMS</h1>
   </div>
-  
+
   <div class="programs-container">
     <div class="row gy-3">
       <div class="col-md-4 n-item">
-  
+
       <a href="programs1.php">
         <div class="programs-card">
           <img src="home-headline-image/eskwelanihan.png" class="card-img-top" alt="...">
@@ -130,11 +140,11 @@
           </div>
         </div>
       </a>
-  
+
       </div>
-  
+
       <div class="col-md-4 n-item">
-  
+
         <a href="programs2.php">
           <div class="programs-card">
             <img src="home-headline-image/ugat.png" class="card-img-top" alt="...">
@@ -143,9 +153,9 @@
             </div>
           </div>
         </a>
-  
+
       </div>
-  
+
       <div class="col-md-4 n-item">
         <a href="programs3.php">
           <div class="programs-card">
@@ -155,7 +165,7 @@
             </div>
           </div>
         </a>
-        
+
       </div>
     </div>
 
@@ -164,7 +174,7 @@
   <div class="programs-container">
     <div class="row gy-3">
       <div class="col-md-4 n-item">
-  
+
       <a href="programs4.php">
         <div class="programs-card">
           <img src="home-headline-image/farm-visit.png" class="card-img-top" alt="...">
@@ -173,11 +183,11 @@
           </div>
         </div>
       </a>
-  
+
       </div>
-  
+
       <div class="col-md-4 n-item">
-  
+
         <a href="programs5.php">
           <div class="programs-card">
             <img src="home-headline-image/tech-cons.png" class="card-img-top" alt="...">
@@ -186,9 +196,9 @@
             </div>
           </div>
         </a>
-  
+
       </div>
-  
+
       <div class="col-md-4 n-item">
         <a href="programs6.php">
           <div class="programs-card">
@@ -198,16 +208,16 @@
             </div>
           </div>
         </a>
-        
+
       </div>
     </div>
 
   </div>
-  
-  
+
+
     <div class="programs-button">
-      <a href="programs.php">  
-        <input type="submit" value="LEARN MORE"/>  
+      <a href="programs.php">
+        <input type="submit" value="LEARN MORE"/>
        </a>
     </div>
 
@@ -262,20 +272,20 @@
           </div>
         </div>
       </a>
-      
+
     </div>
 
 
   </div>
 
-  
+
 
 </div>
 
 
   <div class="programs-button">
-    <a href="news-headline.php">  
-      <input type="submit" value="LEARN MORE"/>  
+    <a href="news-headline.php">
+      <input type="submit" value="LEARN MORE"/>
      </a>
   </div>
 

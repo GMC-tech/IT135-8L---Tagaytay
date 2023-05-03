@@ -27,15 +27,104 @@
   margin-top: 6.3vw;
 }
 .c-item {
-    height: 480px;
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
   }
+
+
+.c-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.c-item:hover .c-item-overlay {
+    opacity: 1;
+}
+
+.c-item-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.c-item:hover .c-item-overlay-text {
+    opacity: 1;
+    color: #333;
+}
+
+
+.c-item:hover .c-img {
+    filter: brightness(50%) blur(5px);
+}
+
+.c-item:hover .carousel-caption {
+    display: none;
+}
   
-  .c-img {
+.c-img {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.4);
   }
-  
+
+.read-more {
+
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0);
+    position: relative;
+    z-index: 2;
+}
+
+.read-more:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.read-more:hover {
+    background-color: rgba(0, 0, 0, 1);
+    transform: translateY(-5px);
+}
+
+.read-more:hover:before {
+    transform: scale(1);
+}
+
+
   .carousel-caption{
     text-align: left;
   }
@@ -51,6 +140,15 @@
     color: #FFFFFF;
     margin-bottom: 50px;
   }
+
+.carousel-caption a {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.carousel-caption:hover a {
+    opacity: 1;
+}
 
      /*OUR PROGRAMS*/
      .programs-text{

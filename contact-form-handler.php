@@ -17,6 +17,7 @@ if(isset($_POST["submit"])) {
    $email = $_POST['uemail'];
    $subject = $_POST['subject'];
    $message = $_POST['message'];
+   $prog_id = $_GET['progid'];
 
    try {
       //Server settings

@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="admin-home.php" class="logo"><img src="navbar-image/logo.png"></a>
+        <a href="home.php" class="logo"><img src="navbar-image/logo.png"></a>
 
         <input type="checkbox" id="menu-bar">
         <label for="menu-bar">MENU</label>
@@ -32,7 +32,7 @@
                             <li><a href="logIn.php">LOGIN</a></li>
                         </ul>
                     <?php else: ?>
-                        <a href="#"><?php echo $_SESSION['username']; ?></a>
+                        <a href="admin-home.php"><?php echo $_SESSION['username']; ?></a>
                         <ul>
                             <li><a href="logout.php">LOGOUT</a></li>
                         </ul>

@@ -1,4 +1,5 @@
 <?php
+global $conn;
 session_start();
 include "config.php";
 include "navbar.php";
@@ -31,13 +32,14 @@ include "contact-form-handler.php";
     <title>Taytay Agriculture | Contact Us</title>
 </head>
 
-<?php 
+<?php
 
 
-$content_id=$_GET['progid']; //get id which we want to update
-        $sql="SELECT *from contents where content_id={$content_id}";
+if(isset($_GET['progid'])) {
+    $content_id=$_GET['progid']; //get id which we want to update
+    $sql="SELECT *from contents where content_id={$content_id}";
 
-        $result=mysqli_query($conn,$sql) or die("Query failed ");
+    $result=mysqli_query($conn,$sql) or die("Query failed ");
 
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
@@ -62,7 +64,7 @@ $content_id=$_GET['progid']; //get id which we want to update
     <p><?php  echo $row['description'];?></p>
   </div>
 </div>
-<?php }
+<?php }}
 }?>
 
 <?php
@@ -81,7 +83,7 @@ if (!empty($_SESSION['user_id'])) {
     <h2>Sign Up</h2>
     </div>
     <form action="signup-form-handler.php" name="contact" method="POST">
-          <input type="hidden" name="prog_id" value="<?php echo $content_id?>">      
+          <input type="hidden" name="prog_id" value="<?php echo $content_id?>">
           <input type="hidden" name="user_id" value="<?php echo $row1['user_id']?> ">
           <input type="hidden" name="firstname" value="<?php echo $row1['first_name']?>">
           <input type="hidden" name="lastname" value="<?php echo $row1['last_name']?>">
@@ -90,6 +92,7 @@ if (!empty($_SESSION['user_id'])) {
     </form>
 
     <div class="filler" style="height: 2vw;"></div>
+
 
 <?php
 
