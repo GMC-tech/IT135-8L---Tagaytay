@@ -184,7 +184,7 @@ while ($row=mysqli_fetch_array($ret)) {
     <div class="ne-container">
         <div class="ne-content">
             <div class="ne-content-img">
-                <img src="img/events_1.jpg" >
+            <img src="<?php echo $row['img'];?>" >
             </div>
             <div class="ne-content-text">
                 <h2 class="ne-content-title"><?php  echo $row['title'];?></h2>
