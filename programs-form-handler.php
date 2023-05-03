@@ -46,12 +46,17 @@ if(isset($_POST["submit"])) {
   
       $mail->send();
     // Redirect back to contact page with success message
-      header("Location: programs-content.php?progid=$prog_id?success=Message%20successfully%20sent");
+    $content_id=$_GET['progid'];
+    $location = "programs-content.php?progid=" . urlencode($prog_id) . "&success=Message%20successfully%20sent";
+    header("Location: " . $location);
+
       exit;
     //echo 'Message has been sent';
   } catch (Exception $e) {
     // Redirect back to contact page with error message
-      header("Location: programs-content.php?progid=$prog_id?error=Message%20not%20sent");
+    $content_id=$_GET['progid'];
+    $location = "programs-content.php?progid=" . urlencode($prog_id) . "&error=Message%20not%20sent";
+    header("Location: " . $location);
       exit;
       //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
   }
