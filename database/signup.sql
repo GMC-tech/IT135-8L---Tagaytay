@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2023 at 03:36 PM
+-- Generation Time: May 03, 2023 at 08:41 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -54,7 +54,7 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `signup_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `signup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
@@ -65,7 +65,7 @@ ALTER TABLE `signup`
 --
 ALTER TABLE `signup`
   ADD CONSTRAINT `signup_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `signup_ibfk_2` FOREIGN KEY (`content_id`) REFERENCES `contents` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `signup_ibfk_2` FOREIGN KEY (`content_id`) REFERENCES `contents` (`content_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
