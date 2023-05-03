@@ -16,9 +16,8 @@ if(isset($_POST["submit"])) {
    //Retrieve form data
    $first_name = $_POST['firstname'];
    $last_name = $_POST['lastname'];
-   $email = $_POST['uemail'];
+   $email = $_POST['email'];
    $subject = "Sign up to Program";
-   $message = $_POST['message'];
    $user_id = $_POST['user_id'];
    $prog_id = $_GET['progid'];
    $sql="SELECT * from contents where content_id={$prog_id}";
