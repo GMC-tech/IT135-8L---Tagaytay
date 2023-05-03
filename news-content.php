@@ -214,7 +214,7 @@ $content_id=$_GET['newsid']; //get id which we want to update
             <div class="text">
                 <h2><?php  echo $row['title'];?></h2>
                 <p1><?php echo date("F j, Y", strtotime($row['date_posted'])); ?></p1>
-                <p><?php  echo $row['description'];?></p>
+                <p><?php  echo nl2br($row['description']);?></p>
             </div>
             </div>
         </div>
