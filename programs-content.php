@@ -68,18 +68,34 @@ $content_id=$_GET['progid']; //get id which we want to update
 <?php
 if (!empty($_SESSION['user_id'])) {
     // User is logged in
+        $user_id=$_SESSION['user_id']; //get id which we want to update
+        $sql1="SELECT * from users where user_id={$user_id}";
+
+        $result1=mysqli_query($conn,$sql) or die("Query failed ");
+
+        if (mysqli_num_rows($result1) > 0) {
+            while ($row1 = mysqli_fetch_assoc($result1)) {
 ?>
 
     <div class="ne-text">
     <h2>Sign Up</h2>
     </div>
     <form action="signup-form-handler.php" name="contact" method="POST">
+          <input type="hidden" name="prog_id" value="<?php echo $content_id?>">      
+          <input type="hidden" name="user_id" value="<?php echo $row1['user_id']?> ">
+          <input type="hidden" name="firstname" value="<?php echo $row1['first_name']?>">
+          <input type="hidden" name="lastname" value="<?php echo $row1['last_name']?>">
+          <input type="hidden" name="email" value="<?php echo $row1['uemail']?>">
         <button type="submit" name="submit" value="Sign Up Now">Sign Up Now</button>
     </form>
 
     <div class="filler" style="height: 2vw;"></div>
 
+<?php
 
+}
+        }
+?>
 
 <?php
 } else {
@@ -91,7 +107,7 @@ if (!empty($_SESSION['user_id'])) {
     <h2>Inquire</h2>
     </div>
     <div class="filler" style="height: 1vw;"></div>
-    <form action="contact-form-handler.php" name="contact" method="POST">
+    <form action="programs-form-handler.php" name="contact" method="POST">
         <div class="half1">
             
             <label for="fname">First Name</label>
