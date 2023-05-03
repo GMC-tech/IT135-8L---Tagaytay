@@ -17,6 +17,8 @@
 
         <nav class="navbar">
             <ul>
+                <li><a href="home.php">USER HOME</a></li>
+                <li><a href="admin-home.php">ADMIN PANEL</a></li>
                 <li><a href="admin-managePost.php">MANAGE POSTS +</a>
                     <ul>
                         <li><a href="admin-managePrograms.php">PROGRAMS</a></li>

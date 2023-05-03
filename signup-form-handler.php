@@ -39,8 +39,8 @@ if(isset($_POST["submit"])) {
       $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
   
       //Recipients
-      $mail->setFrom( $email, 'Taytay Agriculture Office | Sign Up Form');
-      $mail->addAddress('test.taytayagri@gmail.com', 'Receiver'); //can be changed to the actual e-mail of Taytay Agriculture (so they will receive the inquiries) alt email: taytayagriculturetest@gmail.com
+       $mail->setFrom( $email, 'Taytay Agriculture Office | Sign Up Form');
+       $mail->addAddress('test.taytayagri@gmail.com', 'Receiver'); //can be changed to the actual e-mail of Taytay Agriculture (so they will receive the inquiries) alt email: taytayagriculturetest@gmail.com
       $mail->addReplyTo($email, $first_name . ' ' . $last_name);
   
       //Attachments
@@ -50,7 +50,7 @@ if(isset($_POST["submit"])) {
       //Content
       $mail->isHTML(true);                                  //Set email format to HTML
       $mail->Subject = $subject;
-      $mail->Body    = "<b>This Message is from:</b> $first_name $last_name <br> <b>Email:</b> $email <br> <b>Message:</b> <br> This user signed up to the <b>$prog_name</b> program " ;
+       $mail->Body    = "<b>This Message is from:</b> $first_name $last_name <br> <b>Email:</b> $email <br> <b>Message:</b> <br> This user signed up to the <b>$prog_name</b> program " ;
   
       $mail->send();
     // Redirect back to contact page with success message
@@ -70,7 +70,7 @@ if(isset($_POST["submit"])) {
   } catch (Exception $e) {
     // Redirect back to contact page with error message
     $content_id=$_GET['progid'];
-    $location = "programs-content.php?progid=" . urlencode($prog_id) . "&error=Sign%20Up%20unsuccessful.";
+       $location = "programs-content.php?progid=" . urlencode($prog_id) . "&error=Sign%20Up%20unsuccessful.";
     header("Location: " . $location);
       exit;
       //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

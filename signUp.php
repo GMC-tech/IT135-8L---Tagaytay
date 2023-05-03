@@ -45,12 +45,15 @@
 
                     <label for="username">Username</label><br>
                     <input type="text" id="username" name="username" required><br>
+                    <div class="error-message"></div>
+
 
                     <label for="email">Email Address</label><br>
                     <input type="text" id="email" name="email" required><br>
 
                     <label for="password">Password</label><br>
                     <input type="password" id="password" name="password" required><br>
+
 
                     <label for="confirm-password">Confirm Password</label><br>
                     <input type="password" id="confirm-password" name="confirm-password" required>
@@ -91,7 +94,7 @@
 
                                 }
                             }
-    
+
                       ?>
             </div>
         </div>

@@ -54,6 +54,13 @@
     color: #033296;
 }
 
+.error-message {
+    margin-top: 5px;
+    color: red;
+    font-size: 14px;
+}
+
+
 .forms{
     padding-top: 1.5vw;
     width: 100%;

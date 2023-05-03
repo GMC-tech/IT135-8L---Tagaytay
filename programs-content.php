@@ -64,14 +64,15 @@ if(isset($_GET['progid'])) {
     <p><?php  echo $row['description'];?></p>
   </div>
 </div>
+
 <?php }}
 }?>
 
 <?php
-if (!empty($_SESSION['user_id'])) {
+if (!empty($_SESSION['username'])) {
     // User is logged in
-        $user_id=$_SESSION['user_id']; //get id which we want to update
-        $sql1="SELECT * from users where user_id={$user_id}";
+    $username=$_SESSION['username']; //get id which we want to update
+    $sql1="SELECT * from users where username='{$username}'";
 
         $result1=mysqli_query($conn,$sql1) or die("Query failed ");
 
@@ -82,13 +83,28 @@ if (!empty($_SESSION['user_id'])) {
     <div class="ne-text">
     <h2>Sign Up</h2>
     </div>
-    <form action="signup-form-handler.php" name="contact" method="POST">
-          <input type="hidden" name="prog_id" value="<?php echo $content_id?>">
+                <form action="signup-form-handler.php?progid=<?php echo $_GET['progid']; ?>" name="contact" method="POST">
+                    <input type="hidden" name="prog_id" value="<?php echo $content_id?>">
           <input type="hidden" name="user_id" value="<?php echo $row1['user_id']?> ">
           <input type="hidden" name="firstname" value="<?php echo $row1['first_name']?>">
           <input type="hidden" name="lastname" value="<?php echo $row1['last_name']?>">
           <input type="hidden" name="email" value="<?php echo $row1['email']?>">
-        <button type="submit" name="submit" value="Sign Up Now">Sign Up Now</button>
+                    <?php
+                    // Check if a success or error message is set in the URL query string
+                    if (isset($_GET['success'])) {
+                        $message = $_GET['success'];
+                        $alert_type = 'success';
+                    } elseif (isset($_GET['error'])) {
+                        $message = $_GET['error'];
+                        $alert_type = 'error';
+                    }
+
+                    // Display the message to the user
+                    if (isset($message)) {
+                        echo '<div class="alert alert-'.$alert_type.'" role="alert">'.$message.'</div>';
+                    }
+                    ?>
+                    <button type="submit" name="submit" value="Sign Up Now">Sign Up Now</button>
     </form>
 
     <div class="filler" style="height: 2vw;"></div>
@@ -100,61 +116,55 @@ if (!empty($_SESSION['user_id'])) {
         }
 ?>
 
-<?php
+    <?php
 } else {
-    // User is not logged in / Guest
+// User is not logged in / Guest
 ?>
+        <div class="filler"></div>
+        <div class="ne-text">
+            <h2>Inquire</h2>
+        </div>
+        <div class="filler" style="height: 1vw;"></div>
+        <form action="programs-form-handler.?progid=<?php echo $_GET['progid']; ?>" name="contact" method="POST">
+            <div class="half1">
 
-<div class="filler"></div>
-    <div class="ne-text">
-    <h2>Inquire</h2>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname">
+            </div>
+            <div class="half2">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname"><br><br>
+            </div>
+            <br><br><br>
+            <label for="uemail">E-mail</label>
+            <input type="email" id="uemail" name="uemail">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject">
+            <label for="message">Write a message</label>
+            <textarea name="message" placeholder="Type in your message here."></textarea>
+            <?php
+            // Check if a success or error message is set in the URL query string
+            if (isset($_GET['success'])) {
+                $message = $_GET['success'];
+                $alert_type = 'success';
+            } elseif (isset($_GET['error'])) {
+                $message = $_GET['error'];
+                $alert_type = 'error';
+            }
+            // Display the message to the user
+            if (isset($message)) {
+                echo '<div class="alert alert-'.$alert_type.'" role="alert">'.$message.'</div>';
+            }
+            ?>
+            <button type="submit" name="submit" value="Submit">Submit</button>
+        </form>
+        <div class="filler" style="height: 2vw;"></div>
+        <div class="filler"></div>
     </div>
-    <div class="filler" style="height: 1vw;"></div>
-    <form action="programs-form-handler.php" name="contact" method="POST">
-        <div class="half1">
-            
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname">
-        </div>
-        <div class="half2">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname"><br><br>
-        </div>
-        <br><br><br>
-        <label for="uemail">E-mail</label>
-        <input type="email" id="uemail" name="uemail">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject">
-        <label for="message">Write a message</label>
-        <textarea name="message" placeholder="Type in your message here."></textarea>
-        <?php
-        // Check if a success or error message is set in the URL query string
-        if (isset($_GET['success'])) {
-            $message = $_GET['success'];
-            $alert_type = 'success';
-        } elseif (isset($_GET['error'])) {
-            $message = $_GET['error'];
-            $alert_type = 'error';
-        }
+    <?php
+    }
+    ?>
 
-        // Display the message to the user
-        if (isset($message)) {
-            echo '<div class="alert alert-'.$alert_type.'" role="alert">'.$message.'</div>';
-        }
-        ?>
-        <button type="submit" name="submit" value="Submit">Submit</button>
-    </form>
-
-    <div class="filler" style="height: 2vw;"></div>
-
-    <div class="filler"></div>
-</div>
-
-<?php
-}
-?>
-
-    
 </body>
 <?php include "footer.html"; ?>
 </html>
