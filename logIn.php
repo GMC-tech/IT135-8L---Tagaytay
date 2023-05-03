@@ -1,4 +1,9 @@
 <!-- Nav Bar -->
+<?php
+    session_start();
+    include "config.php"; 
+    include "navbar.php";
+?>
 
 <!DOCTYPE html>
 <html lang="en">

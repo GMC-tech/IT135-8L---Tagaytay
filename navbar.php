@@ -48,6 +48,7 @@
                         <a href="#">ACCOUNT</a>
                         <ul>
                             <li><a href="logIn.php">LOGIN</a></li>
+                            <li><a href="signUp.php">SIGN UP</a></li>
                         </ul>
                     <?php else: ?>
                         <a href="#"><?php echo $_SESSION['username']; ?></a>

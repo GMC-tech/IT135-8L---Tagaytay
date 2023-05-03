@@ -4,6 +4,8 @@
         $_SESSION["user_type"]==1 ? header("Location: admin") : header("Location: user");
     } */
 
+    include "navbar.php";
+
     include "config.php"; 
 ?>
 
