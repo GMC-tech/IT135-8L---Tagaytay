@@ -1,4 +1,6 @@
 <?php
+session_start();
+include "config.php";
 //Import PHPMailer classes into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;

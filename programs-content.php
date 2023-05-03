@@ -85,7 +85,7 @@ if (!empty($_SESSION['user_id'])) {
           <input type="hidden" name="user_id" value="<?php echo $row1['user_id']?> ">
           <input type="hidden" name="firstname" value="<?php echo $row1['first_name']?>">
           <input type="hidden" name="lastname" value="<?php echo $row1['last_name']?>">
-          <input type="hidden" name="email" value="<?php echo $row1['uemail']?>">
+          <input type="hidden" name="email" value="<?php echo $row1['email']?>">
         <button type="submit" name="submit" value="Sign Up Now">Sign Up Now</button>
     </form>
 
