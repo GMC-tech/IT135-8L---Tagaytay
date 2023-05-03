@@ -138,7 +138,7 @@ if (!$ret) {
     die("Error executing query: " . mysqli_error($conn));
 }
 
-$cnt = 1;
+
 
 
 
@@ -164,7 +164,7 @@ while ($row=mysqli_fetch_array($ret)) {
 
 
 <?php 
-$cnt=$cnt+1;}
+}
  ?>
 <div class="end"></div>
 
