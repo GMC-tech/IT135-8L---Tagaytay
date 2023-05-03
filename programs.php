@@ -149,7 +149,8 @@ while ($row=mysqli_fetch_array($ret)) {
     <div class="programs-container">
         <div class="programs-content">
             <div class="programs-content-img">
-                <img src="home-headline-image/eskwelanihan.png" >
+                
+                <img src="<?php echo $row['img']?>">
             </div>
             <div class="programs-content-text">
                 <h2 class="programs-content-title"><?php  echo $row['title'];?></h2>
