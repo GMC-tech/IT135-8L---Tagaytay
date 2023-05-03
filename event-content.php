@@ -9,9 +9,10 @@
 <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs | Taytay Agriculture Office</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  
 
     <!-- Nav Bar CSS link-->
     <link rel="stylesheet" type="text/css" href="navbar.css">
@@ -25,25 +26,25 @@
 
 <style >
 
-.programs-text{
+.ne-text{
     width: 100%;
     text-align: center;
     margin-top: 80px;
     margin-bottom: 50px;
   }
 
-  .programs-text h1{
+  .ne-text h1{
     font-family: 'General Sans-Semibold';
     color: #033296;
   }
 
-  .programs-section *{
+  .ne-section *{
     padding:0;
     margin: 0;
-    box-sizing: border-box;
+    margin-top: 10px;
 }
 
-  .programs-section{
+  .ne-section{
     height: 100%;
     display: flex;
     align-items: center;
@@ -51,48 +52,47 @@
     padding: 1.5rem;
 }
 
-.programs-container{
+.ne-container{
     width: 80%;
     padding: 0 1.5rem;
     margin: 0 auto;
 }
 
-.programs-content{
+.ne-content{
     display: flex;
-    background-color: #fff;
-    box-shadow: 2px 2px 5px #9E9E9E, -1px -1px 5px #9E9E9E;
-    border-radius: 3px;
+
 }
 
-.programs-content-img{
+.ne-content-img{
     flex: 1;
 }
 
-.programs-content-img img{
+.ne-content-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.programs-content-text{
+.ne-content-text{
     flex: 1.5;
     padding: 4rem;
+ text-align: justify;
 }
 
-.programs-content-text .programs-content-title{
+.ne-content-text .ne-content-title{
     font-family:'General Sans-Semibold' ;
     color: #222;
     font-size: 1.7vw;
 }
 
-.programs-content-text .programs-content-paragraph{
+.ne-content-text .ne-content-paragraph{
   font-family:'General Sans' ;
     font-size: 1.2vw;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
-.programs-content-text .btn{
+.ne-content-text .btn{
   padding-top: 10px;
   font-family: 'General Sans';
   font-size: 1vw;
@@ -108,7 +108,7 @@
   font-size: 15px;
 }
 
-.programs-content-text .btn:hover {
+.ne-content-text .btn:hover {
   background-color: #0a22fc;
   color: white;
 }
@@ -121,46 +121,112 @@
   margin-bottom: 4.5vw;
 }
 
+.btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 50px;
+  gap: 1%;
+  
+}
+
+.btn-container .btn{
+  padding-top: 10px;
+  font-family: 'General Sans';
+  font-size: 1vw;
+  background: #033296;
+  border: 1px solid #486284;
+  border-radius: 50px;
+  color: white;
+  width: 210px;
+  height: 48px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+}
+  
+.btn-container .btn:hover {
+  background-color: #0a22fc;
+  color: white;
+}
+
+
+
+
+.ne-content-img2 img{
+  float: left;
+  width: 400px;
+  height: 320px;
+  padding: 0 30px 0 0
+}
+
+.text {
+  text-align: justify;
+  padding-left: 10px;
+}
+
+.text h2{
+    font-family:'General Sans-Semibold' ;
+    color: #222;
+    font-size: 1.7vw;
+    margin-bottom: 10px;
+}
+
+
+.text p{
+  text-align: justify;
+    font-family:'General Sans' ;
+    font-size: 1.2vw;
+    margin-top: 2rem;
+}
+
+.text p1 {
+    font-family:'General Sans' ;
+    font-size: 1.2vw;
+    color: gray;
+}
+
 </style>
 </head>
+<?php 
+
+
+$content_id=$_GET['eventid']; //get id which we want to update
+        $sql="SELECT *from contents where content_id={$content_id}";
+
+        $result=mysqli_query($conn,$sql) or die("Query failed ");
+
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+?>
 <body>
 
 <div class="start"></div>
 
+<div class="btn-container">
+<a href="event-headline.php" class="btn">Return </a>
+</div>
 
 
-<div class="programs-text">
-    <h1>PROGRAMS</h1>
-  </div>
-<?php
-$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 1 ORDER BY date_posted DESC, content_ID DESC");
-if (!$ret) {
-    die("Error executing query: " . mysqli_error($conn));
-}
-while ($row=mysqli_fetch_array($ret)) {
-
-?>
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                
-                <img src="<?php echo $row['img']?>">
+  <section class="ne-section">
+    <div class="ne-container">
+        <div class="ne-content">
+            <div class="ne-content-img2">
+            <img src="<?php echo $row['img'];?>" >
+            <div class="text">
+                <h2><?php  echo $row['title'];?></h2>
+		    <p1><?php echo date("F j, Y", strtotime($row['date_posted'])); ?></p1>
+                <p><?php  echo $row['description'];?></p>
             </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title"><?php  echo $row['title'];?></h2>
-                <p class="programs-content-paragraph"><?php  echo $row['description'];?></p>
-                <a href="programs-content.php?progid=<?php echo $row['content_id'];?>" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
   </section>
+  <?php }
+}?>
 
 
-
-<?php 
-}
- ?>
 <div class="end"></div>
 
 <?php include "footer.html"; ?>

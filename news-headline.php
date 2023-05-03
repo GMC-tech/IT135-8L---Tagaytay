@@ -173,7 +173,7 @@
     <h1>NEWS</h1>
   </div>
   <?php
-$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 2 ORDER BY content_id DESC");
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 2 ORDER BY date_posted DESC, content_ID DESC");
 if (!$ret) {
     die("Error executing query: " . mysqli_error($conn));
 }

@@ -172,7 +172,14 @@
 <div class="ne-text">
     <h1>EVENTS</h1>
   </div>
+  <?php
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 3 ORDER BY date_posted DESC, content_id DESC");
+if (!$ret) {
+    die("Error executing query: " . mysqli_error($conn));
+}
+while ($row=mysqli_fetch_array($ret)) {
 
+?>
   <section class="ne-section">
     <div class="ne-container">
         <div class="ne-content">
@@ -180,62 +187,18 @@
                 <img src="img/events_1.jpg" >
             </div>
             <div class="ne-content-text">
-                <h2 class="ne-content-title">TATAY FARMERS' FAIR</h2>
-                <p class="ne-content-paragraph">Abangan ngayong MAYO 2023!</p>
-                <a href="Events1.php" class="btn">READ MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="ne-section">
-    <div class="ne-container">
-        <div class="ne-content">
-            <div class="ne-content-img">
-                <img src="img/events_2.jpg" >
-            </div>
-            <div class="ne-content-text">
-                <h2 class="ne-content-title">NOW HAPPENING: Earth Day 2023: Invest In Our Planet</h2>
-                <p class="ne-content-paragraph">Ang ating Tanggapan ay mamimigay ng libreng buto, punla, at fertilizers ngayong umaga, April 22, 2023 sa tapat ng Bagong Munisipyo.</p>
-                <a href="Events2.php" class="btn">READ MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="ne-section">
-    <div class="ne-container">
-        <div class="ne-content">
-            <div class="ne-content-img">
-                <img src="img/events_3.jpg" >
-            </div>
-            <div class="ne-content-text">
-                <h2 class="ne-content-title">EARTH DAY 2023 READY!</h2>
-                <p class="ne-content-paragraph">Our Office will distribute free seeds of various vegetables, seedlings, liquid fertilizers, and IEC materials in solidarity with the celebration of Earth Day 2023 with the theme Invest In Our Planet this Saturday, April 22, in front of the New Municipal Hall. The program will start at 6:00 am and the above mentioned will be given at 9:00 am.</p>
-                <a href="Events3.php" class="btn">READ MORE</a>
+                <h2 class="ne-content-title"><?php  echo $row['title'];?></h2>
+                <p class="ne-content-paragraph"><?php  echo nl2br($row['description']);?></p>
+                <a href="event-content.php?eventid=<?php echo $row['content_id'];?>" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
   </section>
 
 
-  <section class="ne-section">
-    <div class="ne-container">
-        <div class="ne-content">
-            <div class="ne-content-img">
-                <img src="img/events_4.jpg" >
-            </div>
-            <div class="ne-content-text">
-                <h2 class="ne-content-title">𝐁𝐎𝐎𝐓𝐇 | 𝐓𝐑𝐀𝐃𝐄 | 𝐄𝐗𝐇𝐈𝐁𝐈𝐓 | 𝐅𝐑𝐄𝐄𝐁𝐈𝐄𝐒</h2>
-                <p class="ne-content-paragraph">Abangan ngayong MAYO 2023!</p>
-                <a href="Events4.php" class="btn">READ MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
 
 <div class="end"></div>
-
+<?php } ?>
 <?php include "footer.html"; ?>
 
 </body>
