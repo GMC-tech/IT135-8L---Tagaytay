@@ -35,6 +35,37 @@
     margin: 0;
   }
   
+  .btn-container{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+    gap: 1%;
+    
+  }
+  
+  .btn-container .btn{
+    padding-top: 10px;
+    font-family: 'General Sans';
+    font-size: 1vw;
+    background: #033296;
+    border: 1px solid #486284;
+    border-radius: 50px;
+    color: white;
+    width: 210px;
+    height: 48px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+  }
+    
+  .btn-container .btn:hover {
+    background-color: #0a22fc;
+    color: white;
+  }
+  
+
   .container{
     display: flex;
     max-width: 63%;
