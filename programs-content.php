@@ -100,11 +100,13 @@ if (!empty($_SESSION['username'])) {
                     }
 
                     // Display the message to the user
-                    if (isset($message)) {
+                    if (isset($message) && mysqli_query($conn, $sql)) {
                         echo '<div class="alert alert-'.$alert_type.'" role="alert">'.$message.'</div>';
                     }
                     ?>
                     <button type="submit" name="submit" value="Sign Up Now">Sign Up Now</button>
+
+
     </form>
 
     <div class="filler" style="height: 2vw;"></div>

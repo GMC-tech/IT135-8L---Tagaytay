@@ -1,11 +1,21 @@
 <?php
+global $conn;
 session_start();
-require_once("config.php");
-include "admin-navbar.php";
+include "config.php";
+
+if($_SESSION['user_type']==0){
+    include "navbar.php";
+} elseif ($_SESSION['user_type']==1){
+    include "admin-navbar.php";
+} else{
+    include "navbar.php";
+}
+
+
 
 $id = $_GET['id'];
 
-$result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id` = $id");
+$result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id` = '$id'");
 
 $resultData = mysqli_fetch_assoc($result);
 
@@ -36,9 +46,18 @@ $username = $resultData['username'];
 <body>
     <!-- Sign Up Form -->
 	<div class="return-container">
-    <a href="viewUser.php">
+
+
+
+
+    <a <?php if($_SESSION['user_type']==1): ?> href="viewUser.php">
 	<button type="return" id="return-btn">Return</button>
     </a>
+                <?php else: ?>
+                <a href="user_profile.php">
+                    <button type="return" id="return-btn">Return</button>
+                </a>
+                <?php endif; ?>
 	</div>
     <div class="container">
 	

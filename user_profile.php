@@ -1,9 +1,13 @@
 <?php
-global $conn;
+global $conn, $query;
 session_start();
-include "config.php";
+require_once("config.php");
 include "navbar.php";
 include "contact-form-handler.php";
+
+
+
+
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -13,10 +17,26 @@ include "contact-form-handler.php";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="user_profile.css">
 
+
+
         <title><?php if(!empty($_SESSION['username'])):
                 echo $_SESSION['username'];
             ?> | Taytay Agriculture Office</title>
             <?php endif;?>
+
+
+
+
+        <script>
+            // Wait for the DOM to be ready
+            $(document).ready(function() {
+                // Handle click event for "Edit Profile" button
+                $('.profile-home-button a[data-target="#editModal"]').click(function() {
+                    $('#editModal').modal('show');
+                });
+            });
+        </script>
+
     </head>
     <body>
     <div class="start"></div>
@@ -28,16 +48,19 @@ include "contact-form-handler.php";
     </div>
 
     <div class="profile-home-button">
-        <a href="profile-managePost.php">
-            <input type="submit" value="MANAGE PROGRAMS AND EVENTS"/>
+        <a href="#">
+            <input type="submit" value="SIGNED UP PROGRAMS"/>
         </a>
     </div>
 
     <div class="profile-home-button">
-        <a href="viewUser.php">
+        <a href="editUser.php?id=<?php if (!empty($_SESSION['username'])):
+    echo $_SESSION['user_id']; ?>">
             <input type="submit" value="EDIT PROFILE"/>
         </a>
+        <?php endif;?>
     </div>
+
     <div class="end"></div>
 
     </body>
