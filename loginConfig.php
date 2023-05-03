@@ -15,6 +15,7 @@
             $query = mysqli_fetch_array($sql);
             $_SESSION['username'] = $query['username'];
             $_SESSION['user_type'] = $query['user_type'];
+            $_SESSION['user_id'] = $user_id;
             
             if($query['user_type']=="1")
             {
