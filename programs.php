@@ -132,7 +132,19 @@
 <div class="programs-text">
     <h1>PROGRAMS</h1>
   </div>
+<?php
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 1 ORDER BY content_id DESC");
+if (!$ret) {
+    die("Error executing query: " . mysqli_error($conn));
+}
 
+$cnt = 1;
+
+
+
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
   <section class="programs-section">
     <div class="programs-container">
         <div class="programs-content">
@@ -140,85 +152,9 @@
                 <img src="home-headline-image/eskwelanihan.png" >
             </div>
             <div class="programs-content-text">
-                <h2 class="programs-content-title">Eskwelanihan</h2>
-                <p class="programs-content-paragraph">A school based gardening program that involves students and teachers in the practice of urban agriculture</p>
-                <a href="programs1.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                <img src="img/2.png" >
-            </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title">UGAT</h2>
-                <p class="programs-content-paragraph">The Urban Gardening Augmentation Taytay Program (UGAT) focuses on the promotion of urban agriculture among the citizens of Taytay. This includes community gardening initiatives.</p>
-                <a href="programs2.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                <img src="home-headline-image/gabay.png" >
-            </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title">Gabay Taytay Agri</h2>
-                <p class="programs-content-paragraph">An information drive program in the form of caravans, seminars, training, digital platform, exhibit, fair and dissemination of IEC materials.</p>
-                <a href="programs3.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                <img src="home-headline-image/farm-visit.png" >
-            </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title">Farm Visitation</h2>
-                <p class="programs-content-paragraph"></p>
-                <a href="programs4.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                <img src="home-headline-image/tech-cons.png" >
-            </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title">Technical Consultation</h2>
-                <p class="programs-content-paragraph"></p>
-                <a href="programs5.php" class="btn">LEARN MORE</a>
-            </div>
-        </div>
-    </div>
-  </section>
-
-  <section class="programs-section">
-    <div class="programs-container">
-        <div class="programs-content">
-            <div class="programs-content-img">
-                <img src="home-headline-image/seminar.png" >
-            </div>
-            <div class="programs-content-text">
-                <h2 class="programs-content-title">Seminar Series</h2>
-                <p class="programs-content-paragraph"></p>
-                <a href="programs6.php" class="btn">LEARN MORE</a>
+                <h2 class="programs-content-title"><?php  echo $row['title'];?></h2>
+                <p class="programs-content-paragraph"><?php  echo $row['description'];?></p>
+                <a href="programs-content.php?progid=<?php echo $row['content_id'];?>" class="btn">LEARN MORE</a>
             </div>
         </div>
     </div>
@@ -226,6 +162,9 @@
 
 
 
+<?php 
+$cnt=$cnt+1;}
+ ?>
 <div class="end"></div>
 
 <?php include "footer.html"; ?>
