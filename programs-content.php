@@ -71,7 +71,7 @@ if (!empty($_SESSION['user_id'])) {
         $user_id=$_SESSION['user_id']; //get id which we want to update
         $sql1="SELECT * from users where user_id={$user_id}";
 
-        $result1=mysqli_query($conn,$sql) or die("Query failed ");
+        $result1=mysqli_query($conn,$sql1) or die("Query failed ");
 
         if (mysqli_num_rows($result1) > 0) {
             while ($row1 = mysqli_fetch_assoc($result1)) {
