@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 03, 2023 at 11:13 PM
+-- Generation Time: May 04, 2023 at 10:51 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -77,7 +77,11 @@ INSERT INTO `contents` (`content_id`, `title`, `description`, `img`, `date_poste
 (14, 'TATAY FARMERS\' FAIR', 'Abangan ngayong MAYO 2023! Hatid sa atin ng mga magsasaka at mangingisda ng bayan ng Taytay.', 'img/events_1.jpg', '2023-04-30', 2, 3, ''),
 (15, 'NOW HAPPENING: Earth Day 2023: Invest In Our Planet', 'Ang ating Tanggapan ay mamimigay ng libreng buto, punla, at fertilizers ngayong umaga, April 22, 2023 sa tapat ng Bagong Munisipyo. Ang programang ito ay hatid sa atin ng Pamahalaang Bayan ng Taytay sa pamumuno ng ating Mayor Allan De Leon, Konsehal Tobit Cruz, Councilor Joan Calderon, MENRO Taytay,Rizal, sa pakikiisa ng ating Pambayang Tanggapan ng Agrikultura kasama ng team UGAT. Limited stock only!', 'img/events_2.jpg', '2023-04-30', 2, 3, ''),
 (16, 'EARTH DAY 2023 READY!', 'FREE SEEDS | SEEDLINGS | FERTILIZERS\r\nOur Office will distribute free seeds of various vegetables, seedlings, liquid fertilizers, and IEC materials in solidarity with the celebration of Earth Day 2023 with the theme Invest In Our Planet this Saturday, April 22, in front of the New Municipal Hall. The program will start at 6:00 am and the above mentioned will be given at 9:00 am. This is brought to us by the Municipal Environment and Natural Resources Office MENRO Taytay,Rizal and the City Government of Taytay in the leadership of our Tobit Cruz and in cooperation with the Office of our Councilor Mayor Allan De Leon . Limited stock. Until supplies last only. Let\'s see each other!', 'img/events_3.jpg', '2023-04-30', 2, 3, ''),
-(18, '𝐁𝐎𝐎𝐓𝐇 | 𝐓𝐑𝐀𝐃𝐄 | 𝐄𝐗𝐇𝐈𝐁𝐈𝐓 | 𝐅𝐑𝐄𝐄𝐁𝐈𝐄𝐒', 'Abangan ngayong MAYO 2023! Hatid sa atin ng mga magsasaka at mangingisda ng bayan ng Taytay.', 'img/events_4.jpg', '2023-04-30', 2, 3, '');
+(18, '𝐁𝐎𝐎𝐓𝐇 | 𝐓𝐑𝐀𝐃𝐄 | 𝐄𝐗𝐇𝐈𝐁𝐈𝐓 | 𝐅𝐑𝐄𝐄𝐁𝐈𝐄𝐒', 'Abangan ngayong MAYO 2023! Hatid sa atin ng mga magsasaka at mangingisda ng bayan ng Taytay.', 'img/events_4.jpg', '2023-04-30', 2, 3, ''),
+(32, 'Gabay Taytay Agri', 'An information drive program in the form of caravans, seminars, training, digital platform, exhibit, fair and dissemination of IEC materials.', 'gabay.png', '2023-05-04', 1, 1, 'Gabay Taytay Agri'),
+(33, 'Farm Visitation', 'A farm visitation is as simple as it sounds: it’s a trip to a farm! Plenty of farms have arrangements where you can take a school group on a farm visit.', 'farm-visit.png', '2023-05-04', 1, 1, 'Farm Visitation'),
+(34, 'Technical Consultation', 'A technical consultation program is a service that provides expert advice and guidance on technical matters to individuals or organizations. These programs typically involve a consultation process in which a technical expert meets with the client to assess their needs and provide recommendations based on their expertise.', 'tech-cons.png', '2023-05-04', 1, 1, 'Technical Consultation'),
+(35, 'Seminar Series', 'A seminar series program is a series of presentations or lectures on a particular topic or theme, often organized by an academic institution, professional organization, or industry group. The program typically features a series of speakers who are experts in their respective fields and are invited to present their research, insights, and experiences related to the seminar topic.\r\n\r\n', 'seminar.png', '2023-05-04', 1, 1, 'Seminar Series');
 
 -- --------------------------------------------------------
 
@@ -97,10 +101,10 @@ CREATE TABLE `signup` (
 --
 
 INSERT INTO `signup` (`signup_id`, `user_id`, `content_id`, `is_SignedUp`) VALUES
-(7, 6, 7, 1),
-(8, 6, 7, 1),
-(9, 6, 7, 1),
-(10, 6, 7, 1);
+(11, 6, 7, 1),
+(12, 6, 6, 1),
+(13, 7, 7, 1),
+(14, 7, 6, 1);
 
 -- --------------------------------------------------------
 
@@ -145,7 +149,8 @@ INSERT INTO `users` (`user_id`, `user_type`, `username`, `password`, `first_name
 (4, 0, 'werqawerqwe', '1212', 'dfasdfasdf', 'asdfasdfa', 'werqawerqwe@gmail.com'),
 (5, 1, 'Bauce Jeo', '5252', 'Jeo', 'Malakas', 'JeoMalakas@gmail.com'),
 (6, 0, 'GMC', 'P@ssw0rdk0', 'Glenn Marcus', 'Cinco', 'gmdcinco@gmail.com'),
-(7, 0, 'GMDC', '1234', 'Glenn Marcus', 'Cinco', 'gmdcinco@gmail.com');
+(7, 0, 'GMDC', '1234', 'Glenn Marcus', 'Cinco', 'gmdcinco@gmail.com'),
+(8, 0, 'mamamo', 'mama123', 'Mama', 'Mo', 'mamamo@email.com');
 
 --
 -- Indexes for dumped tables
@@ -193,13 +198,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `signup`
 --
 ALTER TABLE `signup`
-  MODIFY `signup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `signup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_image`
@@ -211,7 +216,7 @@ ALTER TABLE `tbl_image`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
