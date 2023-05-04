@@ -51,10 +51,10 @@ global $conn;
                     <input type="text" id="title" name="title" required><br>
 
                     <label for="headline">Headline</label><br>
-                    <input type="text" id="headline" name="headline" required><br>
+                    <input type="text" id="headline" name="headline" ><br>
  
 					<label for="description">Write description</label><br>
-                    <textarea id="description" name="description" required></textarea><br><br>
+                    <textarea id="description" name="description" ></textarea><br><br>
 					
 					<label for="category">Category</label><br>
                     <select name="category" required>

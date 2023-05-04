@@ -188,14 +188,14 @@ while ($row=mysqli_fetch_array($ret)) {
             </div>
             <div class="ne-content-text">
                 <h2 class="ne-content-title"><?php  echo $row['title'];?></h2>
-                <p class="ne-content-paragraph"><?php  echo nl2br($row['description']);?></p>
+                <p class="ne-content-paragraph"><?php  echo nl2br($row['headline']);?></p>
                 <a href="news-content.php?newsid=<?php echo $row['content_id'];?>" class="btn">READ MORE</a>
             </div>
         </div>
     </div>
   </section>
-<div class="end"></div>
 <?php }?>
+<div class="end"></div>
 <?php include "footer.html"; ?>
 
 </body>

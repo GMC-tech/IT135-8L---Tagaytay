@@ -133,7 +133,7 @@
     <h1>PROGRAMS</h1>
   </div>
 <?php
-$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 1 ORDER BY date_posted DESC, content_ID DESC");
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 1 ORDER BY date_posted ASC, content_ID ASC");
 if (!$ret) {
     die("Error executing query: " . mysqli_error($conn));
 }

@@ -71,7 +71,7 @@ session_start();
         echo '<h5>' . $row["headline"] . '</h5>';
         echo '</div>';
         echo '<div class="c-item-overlay-text">'; // Add overlay to blur background and hide text
-        echo '<a href=programs-content.php?progid=' . $row['content_id'] . '><span class="read-more">Read More</span></a>'; // Add "Read More" button
+        echo '<a href=news-content.php?newsid=' . $row['content_id'] . '><span class="read-more">Read More</span></a>'; // Add "Read More" button
         echo '</div>';
         echo '</div>';
         echo '</a>';
@@ -132,7 +132,7 @@ session_start();
     <div class="row gy-3">
       <div class="col-md-4 n-item">
 
-      <a href="programs1.php">
+      <a href="programs-content.php?progid=40">
         <div class="programs-card">
           <img src="home-headline-image/eskwelanihan.png" class="card-img-top" alt="...">
           <div class="programs-card-body">
@@ -145,7 +145,7 @@ session_start();
 
       <div class="col-md-4 n-item">
 
-        <a href="programs2.php">
+        <a href="programs-content.php?progid=41">
           <div class="programs-card">
             <img src="home-headline-image/ugat.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -157,7 +157,7 @@ session_start();
       </div>
 
       <div class="col-md-4 n-item">
-        <a href="programs3.php">
+        <a href="programs-content.php?progid=42">
           <div class="programs-card">
             <img src="home-headline-image/gabay.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -175,7 +175,7 @@ session_start();
     <div class="row gy-3">
       <div class="col-md-4 n-item">
 
-      <a href="programs4.php">
+      <a href="programs-content.php?progid=43">
         <div class="programs-card">
           <img src="home-headline-image/farm-visit.png" class="card-img-top" alt="...">
           <div class="programs-card-body">
@@ -188,7 +188,7 @@ session_start();
 
       <div class="col-md-4 n-item">
 
-        <a href="programs5.php">
+        <a href="programs-content.php?progid=44">
           <div class="programs-card">
             <img src="home-headline-image/tech-cons.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
@@ -200,7 +200,7 @@ session_start();
       </div>
 
       <div class="col-md-4 n-item">
-        <a href="programs6.php">
+        <a href="programs-content.php?progid=45">
           <div class="programs-card">
             <img src="home-headline-image/seminar.png" class="card-img-top" alt="...">
             <div class="programs-card-body">
