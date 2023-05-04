@@ -2,28 +2,24 @@
 global $conn;
 session_start();
 include "config.php";
-
-if($_SESSION['user_type']==0){
-    include "navbar.php";
-} elseif ($_SESSION['user_type']==1){
-    include "admin-navbar.php";
-} else{
-    include "navbar.php";
-}
+		include "admin-navbar.php";
 
 
 
-$id = $_GET['id'];
 
-$result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id` = '$id'");
+    $id = $_GET['id'];
 
-$resultData = mysqli_fetch_assoc($result);
+    $result = mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id` = '$id'");
 
-$firstname = $resultData['first_name'];
-$lastname = $resultData['last_name'];
-$email = $resultData['email'];
-$password = $resultData['password'];
-$username = $resultData['username'];
+    $resultData = mysqli_fetch_assoc($result);
+
+    $firstname = $resultData['first_name'];
+    $lastname = $resultData['last_name'];
+    $email = $resultData['email'];
+    $password = $resultData['password'];
+    $username = $resultData['username'];
+
+
 ?>
 <html>
 <head>
@@ -46,16 +42,10 @@ $username = $resultData['username'];
 <body>
     <!-- Sign Up Form -->
 	<div class="return-container">
-
-        <?php if($_SESSION['user_type']==1): ?>
     <a  href="viewUser.php">
 	<button type="return" id="return-btn">Return</button>
     </a>
-        <?php else:?>
-                <a href="user_profile.php">
-                    <button type="return" id="return-btn">Return</button>
-                </a>
-                <?php endif; ?>
+
 	</div>
     <div class="container">
 	

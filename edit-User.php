@@ -5,6 +5,7 @@ include "config.php";
 if (isset($_POST['update'])) {
 	
 	$id = mysqli_real_escape_string($conn, $_POST['id']);
+    $user_type = mysqli_real_escape_string($conn, $_POST['user_type']);
 
 	$first = mysqli_real_escape_string($conn, $_POST['firstname']);
     $last = mysqli_real_escape_string($conn, $_POST['lastname']);
@@ -37,16 +38,19 @@ if (isset($_POST['update'])) {
 
     }
 
-    if ($_SESSION['user_type'] == 1){
-        header('location: viewUser.php');
-        $_SESSION['username'] = $username;
-    }
-    else{
-        header('location: user_profile.php');
-        $_SESSION['username'] = $username;
-    }
 
 
+
+
+}
+
+if ($_SESSION['user_type'] == 1){
+    header('location: viewUser.php');
+    $user_type= $_SESSION['user_type'];
+}
+else{
+    header('location: user_profile.php');
+    $user_type= $_SESSION['user_type'];
 
 }
 ?>

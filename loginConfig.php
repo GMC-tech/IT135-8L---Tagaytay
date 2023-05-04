@@ -1,7 +1,8 @@
 <?php
     session_start();
 
-    include "config.php"; 
+    include "config.php";
+
 
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -22,11 +23,13 @@
             {
                 header("location:admin-home.php");
                 $_SESSION['user_id'] = $user_id;
+                setcookie('user_type', $user_type, time() + (86400 * 30), "/"); // expires in 30 days
             }
             else if($query['user_type']=="0")
             {
                 header("location:home.php");
                 $_SESSION['user_id'] = $user_id;
+                setcookie('user_type', $user_type, time() + (86400 * 30), "/"); // expires in 30 days
 
             }
         }

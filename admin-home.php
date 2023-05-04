@@ -2,6 +2,8 @@
     session_start();
     include "config.php"; 
     include "admin-navbar.php";
+
+$user_type= $_SESSION['user_type'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
