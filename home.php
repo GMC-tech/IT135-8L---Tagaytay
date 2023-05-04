@@ -89,10 +89,7 @@ session_start();
     </button>
   </div>
 
-  <?php
-  // Close the MySQL database connection
-  mysqli_close($conn);
-  ?>
+
 
 
 
@@ -234,46 +231,43 @@ session_start();
 
 <div class="news-container">
   <div class="row gy-3">
-    <div class="col-md-4 n-item">
 
-    <a href="#">
+  <?php
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 2 or category_id = 3 ORDER BY date_posted DESC, content_ID DESC");
+if (!$ret) {
+    die("Error executing query: " . mysqli_error($conn));
+}
+$ctr=1;
+while ($row=mysqli_fetch_array($ret) ) {
+  if ($ctr<=3){
+
+?>  
+    <div class="col-md-4 n-item">
+    <?php 
+if($row['category_id'] == 2){
+  echo '<a href="news-content.php?newsid='.$row['content_id'].'">';
+}
+else if($row['category_id'] == 3){
+  echo '<a href="event-content.php?eventid='.$row['content_id'].'">';
+}
+?>
+
       <div class="card">
-        <img src="home-headline-image/1.png" class="card-img-top" alt="...">
+        <img src="<?php echo $row['img']?>" class="card-img-top" alt="...">
         <div class="card-body">
-          <h4 class="card-title">Fur Babies-Taytay is now powered by UNAHCO!</h4>
-          <p class="card-text">As of 1:00 PM ubos na po ang freebies from our generous sponsor. Ang Doggissentials ay namamahagi ng free AppeBoost vitamins at Bubble Bath Grooming Shampoo.</p>
+          <h4 class="card-title"><?php  echo $row['title'];?></h4>
+          <p class="card-text"><?php  echo $row['description'];?></p>
         </div>
       </div>
     </a>
-
     </div>
 
-    <div class="col-md-4 n-item">
+<?php 
 
-      <a href="#">
-        <div class="card">
-          <img src="home-headline-image/2.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">FREE FREE FREE</h4>
-            <p class="card-text">Ang ating Tanggapan ay namamahagi rin libreng buto, seedlings, fertilizers, at IEC materials dito sa ating Fur Babies Day Out until supplies last, located at San Juan Gym.</p>
-          </div>
-        </div>
-      </a>
-
-    </div>
-
-    <div class="col-md-4 n-item">
-      <a href="#">
-        <div class="card">
-          <img src="home-headline-image/3.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h4 class="card-title">NOW HAPPENING: Fur Babies Day Out</h4>
-            <p class="card-text">Ang programang ito ay hatid sa atin ng Rizal Provincial Goverment sa pamumuno ng ating Gov. Nina Ynares sa pakikipagtulungan ng ating Pamahalaang Bayan sa pamumuno ng ating Mayor Allan De Leon  kasama ang UNAHCO.</p>
-          </div>
-        </div>
-      </a>
-
-    </div>
+  }
+  
+$ctr++;
+}?>
 
 
   </div>
@@ -288,6 +282,12 @@ session_start();
       <input type="submit" value="LEARN MORE"/>
      </a>
   </div>
+
+
+  <?php
+  // Close the MySQL database connection
+  mysqli_close($conn);
+  ?>
 
   <div class="end"></div>
 
