@@ -29,6 +29,11 @@
       <a href="viewUser.php">  
         <input type="submit" value="MANAGE USERS"/>  
        </a>
+
+    <div class="admin-home-button">
+      <a href="admin_viewSignedUp.php">  
+        <input type="submit" value="VIEW PROGRAM SIGN UPS"/>  
+       </a>
     </div>
     <div class="end"></div>
 

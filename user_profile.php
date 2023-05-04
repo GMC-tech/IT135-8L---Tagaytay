@@ -1,7 +1,7 @@
 <?php
 global $conn, $query, $user_id;
 session_start();
-include"config.php";
+include "config.php";
 include "navbar.php";
 include "contact-form-handler.php";
 
@@ -45,7 +45,7 @@ if(isset($_SESSION['username'])) {
     </div>
 
     <div class="profile-home-button">
-        <a href="#">
+        <a href="user_viewSignedUp.php?id=<?php  echo $user_id?>">
             <input type="submit" value="SIGNED UP PROGRAMS"/>
         </a>
     </div>
