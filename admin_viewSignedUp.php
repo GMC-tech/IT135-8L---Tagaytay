@@ -6,7 +6,7 @@ include "admin-navbar.php";
 
 // execute the SQL query
 //$user_id = $_GET['id'];
-$sql = "SELECT c.title, u.username, u.first_name, u.last_name 
+$sql = "SELECT c.title, u.username, u.first_name, u.last_name, u.email 
         FROM contents c 
         INNER JOIN signup s ON c.content_id = s.content_id 
         INNER JOIN users u ON s.user_id = u.user_id
@@ -32,6 +32,7 @@ $result = mysqli_query($conn, $sql);
             <th>Username</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>E-mail</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -45,6 +46,7 @@ if (mysqli_num_rows($result) > 0) {
         echo "<td>".$row['username']."</td>";
         echo "<td>".$row['first_name']."</td>";
         echo "<td>".$row['last_name']."</td>";
+        echo "<td>".$row['email']."</td>";
     }
 }else {
     echo "No one signed up to any programs";
