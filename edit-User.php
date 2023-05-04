@@ -30,13 +30,23 @@ if (isset($_POST['update'])) {
 			echo "<div class='alert alert-danger'>Enter your password. </div>";
 		}
 	} 
-    else 
-    {
-		$result = mysqli_query($conn, "UPDATE `users` SET `username`='$username',`password`='$password',`first_name`='$first',`last_name`='$last',`email`='$email' WHERE `user_id` = $id");
-		
+    else {
+        $result = mysqli_query($conn, "UPDATE `users` SET `username`='$username',`password`='$password',`first_name`='$first',`last_name`='$last',`email`='$email' WHERE `user_id` = $id");
+
         echo "<div class='alert alert-success'>User Details Successfully Updated!</div>";
 
+    }
+
+    if ($_SESSION['user_type'] == 1){
         header('location: viewUser.php');
-	}
+        $_SESSION['username'] = $username;
+    }
+    else{
+        header('location: user_profile.php');
+        $_SESSION['username'] = $username;
+    }
+
+
+
 }
 ?>

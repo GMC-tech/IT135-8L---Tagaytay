@@ -1,11 +1,21 @@
 <?php
-global $conn, $query;
+global $conn, $query, $user_id;
 session_start();
-require_once("config.php");
+include"config.php";
 include "navbar.php";
 include "contact-form-handler.php";
 
+$result = mysqli_query($conn, "SELECT * FROM `users` ORDER BY `user_id` ");
 
+
+
+$username = $_SESSION['username'];
+$query = mysqli_query($conn, "SELECT user_id FROM users WHERE username = '$username'");
+$result = mysqli_fetch_assoc($query);
+$user_id = $result['user_id'];
+
+if(isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];}
 
 
 ?>
@@ -19,32 +29,19 @@ include "contact-form-handler.php";
 
 
 
-        <title><?php if(!empty($_SESSION['username'])):
-                echo $_SESSION['username'];
+        <title><?php echo $username;
             ?> | Taytay Agriculture Office</title>
-            <?php endif;?>
 
 
-
-
-        <script>
-            // Wait for the DOM to be ready
-            $(document).ready(function() {
-                // Handle click event for "Edit Profile" button
-                $('.profile-home-button a[data-target="#editModal"]').click(function() {
-                    $('#editModal').modal('show');
-                });
-            });
-        </script>
 
     </head>
     <body>
     <div class="start"></div>
     <div class="profile-welcome">
-        <h1>  <?php if(!empty($_SESSION['username'])):
-            echo $_SESSION['username'];
+        <h1>  <?php echo $username;
             ?> </h1>
-        <?php endif;?>
+
+
     </div>
 
     <div class="profile-home-button">
@@ -54,11 +51,10 @@ include "contact-form-handler.php";
     </div>
 
     <div class="profile-home-button">
-        <a href="editUser.php?id=<?php if (!empty($_SESSION['username'])):
-    echo $_SESSION['user_id']; ?>">
+        <a href="editUser.php?id=<?php  echo $user_id?>">
             <input type="submit" value="EDIT PROFILE"/>
         </a>
-        <?php endif;?>
+
     </div>
 
     <div class="end"></div>

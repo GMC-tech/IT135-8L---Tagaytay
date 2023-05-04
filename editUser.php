@@ -47,13 +47,11 @@ $username = $resultData['username'];
     <!-- Sign Up Form -->
 	<div class="return-container">
 
-
-
-
-    <a <?php if($_SESSION['user_type']==1): ?> href="viewUser.php">
+        <?php if($_SESSION['user_type']==1): ?>
+    <a  href="viewUser.php">
 	<button type="return" id="return-btn">Return</button>
     </a>
-                <?php else: ?>
+        <?php else:?>
                 <a href="user_profile.php">
                     <button type="return" id="return-btn">Return</button>
                 </a>
@@ -63,7 +61,6 @@ $username = $resultData['username'];
 	
 	
         <div class="content">
-		
             <h1><center>EDIT USER<center></h1>
             <div class="forms">
                 <form name="edit" action="edit-User.php" method="POST">

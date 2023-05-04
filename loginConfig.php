@@ -15,15 +15,19 @@
             $query = mysqli_fetch_array($sql);
             $_SESSION['username'] = $query['username'];
             $_SESSION['user_type'] = $query['user_type'];
-            $_SESSION['user_id'] = $user_id;
+            $_SESSION['user_id'] = $query['user_id'];
+
             
             if($query['user_type']=="1")
             {
                 header("location:admin-home.php");
+                $_SESSION['user_id'] = $user_id;
             }
             else if($query['user_type']=="0")
             {
                 header("location:home.php");
+                $_SESSION['user_id'] = $user_id;
+
             }
         }
         else
