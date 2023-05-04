@@ -78,6 +78,20 @@ if (!empty($_SESSION['username'])) {
 
         if (mysqli_num_rows($result1) > 0) {
             while ($row1 = mysqli_fetch_assoc($result1)) {
+                //Get program ID from URL
+                $content_id = $_GET['progid'];
+
+                //Check if user has already signed up
+                $sql2 = "SELECT * FROM signup WHERE user_id = {$row1['user_id']} AND content_id = $content_id AND is_SignedUp = 1 ";
+                $result2 = mysqli_query($conn, $sql2);
+
+                // If user has already signed up, display message and hide submit button
+                if (mysqli_num_rows($result2) > 0) {
+                    echo '<div class="alert alert-success" role="alert">You have already signed up for this program!</div>';
+                    echo '<style>button[name="submit"] { display: none; }</style>';
+                }
+                // If user has not signed up yet, display the form with the submit button
+                else {
 ?>
 
     <div class="ne-text">
@@ -113,7 +127,7 @@ if (!empty($_SESSION['username'])) {
 
 
 <?php
-
+                }
 }
         }
 ?>
