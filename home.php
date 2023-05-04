@@ -233,7 +233,7 @@ session_start();
   <div class="row gy-3">
 
   <?php
-$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 2 or category_id = 3 ORDER BY date_posted DESC, content_ID DESC");
+$ret=mysqli_query($conn,"SELECT * FROM contents WHERE category_id = 2 ORDER BY date_posted DESC, content_ID DESC");
 if (!$ret) {
     die("Error executing query: " . mysqli_error($conn));
 }
@@ -247,16 +247,13 @@ while ($row=mysqli_fetch_array($ret) ) {
 if($row['category_id'] == 2){
   echo '<a href="news-content.php?newsid='.$row['content_id'].'">';
 }
-else if($row['category_id'] == 3){
-  echo '<a href="event-content.php?eventid='.$row['content_id'].'">';
-}
 ?>
 
       <div class="card">
         <img src="<?php echo $row['img']?>" class="card-img-top" alt="...">
         <div class="card-body">
           <h4 class="card-title"><?php  echo $row['title'];?></h4>
-          <p class="card-text"><?php  echo $row['description'];?></p>
+          <p class="card-text"><?php  echo $row['headline'];?></p>
         </div>
       </div>
     </a>
