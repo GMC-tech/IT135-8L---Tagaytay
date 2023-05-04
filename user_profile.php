@@ -51,7 +51,7 @@ if(isset($_SESSION['username'])) {
     </div>
 
     <div class="profile-home-button">
-        <a href="editUser.php?id=<?php  echo $user_id?>">
+        <a href="user-editUser.php?id=<?php  echo $user_id?>">
             <input type="submit" value="EDIT PROFILE"/>
         </a>
 
