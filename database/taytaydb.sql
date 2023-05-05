@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2023 at 12:33 PM
+-- Generation Time: May 05, 2023 at 06:19 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -108,25 +108,6 @@ INSERT INTO `signup` (`signup_id`, `user_id`, `content_id`, `is_SignedUp`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_image`
---
-
-CREATE TABLE `tbl_image` (
-  `image_id` int(11) NOT NULL,
-  `image_name` varchar(250) NOT NULL,
-  `image_description` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `tbl_image`
---
-
-INSERT INTO `tbl_image` (`image_id`, `image_name`, `image_description`) VALUES
-(2, 'Screenshot (2).png', '');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -178,12 +159,6 @@ ALTER TABLE `signup`
   ADD KEY `content_id` (`content_id`);
 
 --
--- Indexes for table `tbl_image`
---
-ALTER TABLE `tbl_image`
-  ADD PRIMARY KEY (`image_id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -204,12 +179,6 @@ ALTER TABLE `contents`
 --
 ALTER TABLE `signup`
   MODIFY `signup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `tbl_image`
---
-ALTER TABLE `tbl_image`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
